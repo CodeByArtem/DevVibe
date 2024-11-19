@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Link from 'next/link';
+import Logo from '@/components/layout/header/Logo';
 
 
 const Header: React.FC = () => {
@@ -8,7 +9,7 @@ const Header: React.FC = () => {
     <header className="bg-gray-800 text-white p-4">
       <nav className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold">
-          My Portfolio
+     <Logo/>
         </Link>
         <ul className="flex space-x-6">
           <li>
