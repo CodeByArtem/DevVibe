@@ -1,4 +1,3 @@
-'use client';
 import React, { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 
@@ -44,6 +43,7 @@ const Logo: React.FC = () => {
       className="group flex items-center space-x-2 relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      suppressHydrationWarning // Добавлено suppressHydrationWarning
     >
       <svg
         className="w-8 h-8 text-gradient transition-all duration-300 transform hover:scale-110"
