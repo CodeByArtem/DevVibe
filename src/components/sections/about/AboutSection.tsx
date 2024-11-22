@@ -51,7 +51,7 @@ const AboutSection: React.FC = () => {
   return (
     <section   id="about" className="py-20 px-6 text-white relative overflow-hidden bg-cover bg-center"
              style={{ backgroundImage: 'url(/images/background-pattern.webp)' }}>
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
+     ть <div className="relative z-10 max-w-5xl mx-auto text-center">
         {/* Заголовок */}
         <h2 className="text-5xl md:text-4xl font-extrabold mb-12 text-white drop-shadow-md">
           Обо мне

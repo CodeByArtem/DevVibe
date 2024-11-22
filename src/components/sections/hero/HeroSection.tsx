@@ -26,13 +26,18 @@ const HeroSection: React.FC = () => {
 
   return (
     <section
-      className="bg-gradient-to-r from-blue-600 to-purple-800 text-white pt-0 pb-20 flex flex-col md:flex-row items-center justify-center px-6 relative">
+      className="text-white flex flex-col md:flex-row items-center justify-center px-6 pb-10 relative"
+      style={{
+        backgroundImage: 'url(/images/matrix.webp)',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}>
 
-      {/* Фотография */}
-      <div
-        className="w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center"> {/* Центрируем изображение */}
+      <div className="w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center">
         <Image
-          className="rounded-xl"
+          className="rounded-xl object-contain object-center shadow-lg shadow-green-500/50 glow-effect"
           src="/images/hotoroom.png"
           alt="Артем за компьютером"
           width={564}
@@ -47,7 +52,11 @@ const HeroSection: React.FC = () => {
         className="flex-1 max-w-xl text-center md:text-left md:pl-10 flex flex-col justify-center sm:mt-8 mx-auto md:mx-0"> {/* mx-auto на мобильных, md:mx-0 на больших экранах */}
 
         {/* Печатающий заголовок */}
-        <h1 className="text-3xl md:text-4xl font-bold mb-8 md:mb-16 text-red-500 sm:mb-[30px] h-[80px]">
+        <h1
+          className="text-3xl md:text-4xl font-bold mb-8 md:mb-16 text-white sm:mb-[30px] h-[80px]"
+          style={{
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00',
+          }}>
           <Typewriter
             options={{
               strings: ['Привет, я Артем, Full-Stack Разработчик'],

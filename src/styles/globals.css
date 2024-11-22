@@ -48,7 +48,9 @@ body {
 .rotate-y-180 {
     transform: rotateY(180deg);
 }
-
+.glow-effect {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.7);
+}
 
 
 
