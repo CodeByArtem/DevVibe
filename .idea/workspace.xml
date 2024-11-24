@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f87ce8e1-69b5-450d-8518-2bdfaa5aac49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/matrix.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/project/webstudio.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sections/projects/ProjectSections.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/about/AboutSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/about/AboutSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/hero/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/hero/HeroSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
@@ -20,7 +24,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -31,27 +35,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\repositiry\\portfolio\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "ts.external.directory.path": "D:\\repositiry\\portfolio\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\repositiry\portfolio\public\images\project" />
       <recent name="D:\repositiry\portfolio\public\images" />
       <recent name="D:\repositiry\portfolio\public\svg" />
       <recent name="D:\repositiry\portfolio\src\components\layout" />
       <recent name="D:\repositiry\portfolio\src\styles" />
-      <recent name="D:\repositiry\portfolio\src" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -86,7 +91,8 @@
       <workItem from="1732093558150" duration="4287000" />
       <workItem from="1732128216154" duration="16341000" />
       <workItem from="1732215318386" duration="10353000" />
-      <workItem from="1732267344623" duration="3021000" />
+      <workItem from="1732267344623" duration="3192000" />
+      <workItem from="1732446898706" duration="32711000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <option name="createBranch" value="false" />

@@ -1,8 +1,13 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { FaCss3Alt, FaGit, FaHtml5, FaJsSquare, FaNodeJs, FaReact } from 'react-icons/fa';
+import { FaCss3Alt, FaGit, FaHtml5, FaJsSquare, FaNodeJs, FaReact } from 'react-icons/fa'; // Добавим FaReact
+import { SiNextdotjs } from 'react-icons/si'; // Иконка Next.js
+
 import Typewriter from 'typewriter-effect';
+
+const CHARACTERS = "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトホモヨョロヲゴゾドボポヴッンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:,.<>?/~`";
+
 
 const HeroSection: React.FC = () => {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
@@ -16,26 +21,112 @@ const HeroSection: React.FC = () => {
   };
 
   const icons = [
-    { icon: FaReact, color: 'text-blue-500', ring: 'ring-blue-500', name: 'react' },
-    { icon: FaHtml5, color: 'text-orange-500', ring: 'ring-orange-500', name: 'html' },
-    { icon: FaCss3Alt, color: 'text-blue-600', ring: 'ring-blue-600', name: 'css' },
-    { icon: FaNodeJs, color: 'text-green-500', ring: 'ring-green-500', name: 'node' },
-    { icon: FaJsSquare, color: 'text-yellow-500', ring: 'ring-yellow-500', name: 'js' },
-    { icon: FaGit, color: 'text-black', ring: 'ring-black', name: 'git' },
+    { icon: FaHtml5, color: 'text-orange-500', name: 'html', label: 'HTML' },
+    { icon: FaCss3Alt, color: 'text-blue-600', name: 'css', label: 'CSS' },
+    { icon: FaNodeJs, color: 'text-green-500', name: 'node', label: 'Node.js' },
+    { icon: FaJsSquare, color: 'text-yellow-500', name: 'js', label: 'JavaScript' },
+    { icon: FaGit, color: 'text-red-600', name: 'git', label: 'Git' },
+    { icon: SiNextdotjs, color: 'text-blue-100', name: 'next', label: 'Next.js' },
+    { icon: FaReact, color: 'text-blue-500', name: 'react', label: 'React' }, // Добавим React
   ];
+
+  useEffect(() => {
+    // Инициализируем матричную анимацию при монтировании компонента
+    const canvas = document.getElementById('matrix-canvas') as HTMLCanvasElement;
+    const context = canvas.getContext('2d');
+    const FONT_SIZE = 16;
+    let columns: Column[] = []; // Типизация массива columns
+    let columnsCount = 0;
+
+    const initCanvasSize = () => {
+      canvas.width = document.documentElement.clientWidth;
+      canvas.height = document.documentElement.clientHeight;
+    };
+
+    const initColumns = () => {
+      columnsCount = canvas.width / FONT_SIZE;
+      columns = [];
+      for (let i = 0; i < columnsCount; i++) {
+        columns.push(new Column(i * FONT_SIZE, FONT_SIZE, canvas.height, context!));
+      }
+    };
+
+    class Column {
+      x: number;
+      y: number;
+      fontSize: number;
+      canvasHeight: number;
+      context: CanvasRenderingContext2D;
+
+      constructor(x: number, fontSize: number, canvasHeight: number, context: CanvasRenderingContext2D) {
+        this.x = x;
+        this.y = 0;
+        this.fontSize = fontSize;
+        this.canvasHeight = canvasHeight;
+        this.context = context;
+      }
+
+      drawSymbol() {
+        if (this.y === 0 && Math.random() < 0.98) {
+          return;
+        }
+
+        const characterIndex = Math.floor(Math.random() * CHARACTERS.length);
+        const symbol = CHARACTERS[characterIndex];
+
+        this.context.fillText(symbol, this.x, this.y);
+
+        if (this.y > this.canvasHeight) {
+          this.y = 0;
+        } else {
+          this.y += this.fontSize;
+        }
+      }
+    }
+
+    const animate = () => {
+      context!.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      context!.fillRect(0, 0, canvas.width, canvas.height);
+
+      context!.fillStyle = 'green';
+      context!.font = `bold ${FONT_SIZE}px monospace`;
+      columns.forEach((column) => column.drawSymbol());
+
+      setTimeout(() => requestAnimationFrame(animate), 50);
+    };
+
+    initCanvasSize();
+    initColumns();
+    animate();
+
+    window.addEventListener('resize', () => {
+      initCanvasSize();
+      initColumns();
+      context!.clearRect(0, 0, canvas.width, canvas.height);
+    });
+
+    return () => {
+      // Очистим canvas, когда компонент будет размонтирован
+      context!.clearRect(0, 0, canvas.width, canvas.height);
+    };
+  }, []);
 
   return (
     <section
       className="text-white flex flex-col md:flex-row items-center justify-center px-6 pb-10 relative"
       style={{
-        backgroundImage: 'url(/images/matrix.webp)',
+        backgroundImage: 'url(/images/aboutmatrix.webp)',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
-      }}>
+        minHeight: '100vh', // Секция занимает весь экран
+      }}
+    >
+      {/* Canvas для матричной анимации */}
+      <canvas id="matrix-canvas" className="absolute top-0 left-0 w-full h-full z-10" />
 
-      <div className="w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center">
+      <div className="w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center z-20">
         <Image
           className="rounded-xl object-contain object-center shadow-lg shadow-green-500/50 glow-effect"
           src="/images/hotoroom.png"
@@ -49,14 +140,17 @@ const HeroSection: React.FC = () => {
 
       {/* Контент */}
       <div
-        className="flex-1 max-w-xl text-center md:text-left md:pl-10 flex flex-col justify-center sm:mt-8 mx-auto md:mx-0"> {/* mx-auto на мобильных, md:mx-0 на больших экранах */}
-
+        className="flex-1 max-w-xl text-center md:text-left md:pl-10 flex flex-col justify-center sm:mt-8 mx-auto md:mx-0 z-20"
+      >
         {/* Печатающий заголовок */}
         <h1
-          className="text-3xl md:text-4xl font-bold mb-8 md:mb-16 text-white sm:mb-[30px] h-[80px]"
+          className="text-3xl md:text-4xl font-bold mb-8 md:mb-16 text-white sm:mb-[30px] h-[80px] flex items-center justify-center"
           style={{
             textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00',
-          }}>
+            height: '80px', // фиксируем высоту для предотвращения прыжков
+            overflow: 'hidden', // скрываем лишнее
+          }}
+        >
           <Typewriter
             options={{
               strings: ['Привет, я Артем, Full-Stack Разработчик'],
@@ -70,20 +164,46 @@ const HeroSection: React.FC = () => {
         </h1>
 
         {/* Описание */}
-        <div className="text-lg md:text-xl mb-8">
+        <p
+          className="text-lg md:text-xl mb-4 text-black font-bold"
+          style={{
+            textShadow:
+              '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00',
+          }}
+        >
           Создаю современные веб-приложения с чистым кодом и адаптивным дизайном.
-        </div>
+        </p>
 
-        {/* Иконки */}
-        <ul className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-8">
-          {icons.map(({ icon: Icon, color, ring, name }) => (
+        {/* Иконки с подписями */}
+        <ul className="flex justify-evenly gap-4 md:gap-10 flex-wrap mt-2 md:mt-4">
+          {icons.map(({ icon: Icon, color, name, label }) => (
             <li
               key={name}
-              className={`p-4 rounded-full bg-white shadow-lg transform transition-transform duration-300 hover:scale-110 ${hoveredIcon === name ? `ring-4 ${ring}` : ''}`}
+              className="flex flex-col items-center p-4"
               onMouseEnter={() => handleMouseEnter(name)}
               onMouseLeave={handleMouseLeave}
             >
-              <Icon className={`text-5xl ${color} md:text-6xl sm:text-4xl`} />
+              {/* Иконка с анимацией */}
+              <div
+                className={`relative flex justify-center items-center transition-all duration-500 transform ${
+                  hoveredIcon === name ? 'scale-110 rotate-[360deg]' : 'scale-90'
+                }`}
+                style={{ marginTop: '-10px' }}
+              >
+                <Icon
+                  className={`text-4xl ${color} sm:text-3xl md:text-5xl lg:text-5xl`} // разные размеры для разных экранов
+                />
+              </div>
+
+              {/* Подпись с эффектом свечения */}
+              <span
+                className={`mt-2 text-lg text-black font-semibold transition-all duration-500 ${
+                  hoveredIcon === name ? 'text-xl text-green-500' : 'text-white'
+                }`}
+                style={{ textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00' }}
+              >
+                {label}
+              </span>
             </li>
           ))}
         </ul>
