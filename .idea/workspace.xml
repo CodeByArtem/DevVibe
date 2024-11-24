@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f87ce8e1-69b5-450d-8518-2bdfaa5aac49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/project/webstudio.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sections/projects/ProjectSections.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/about/AboutSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/about/AboutSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/hero/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/hero/HeroSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
-    </list>
+    <list default="true" id="f87ce8e1-69b5-450d-8518-2bdfaa5aac49" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +82,7 @@
       <workItem from="1732128216154" duration="16341000" />
       <workItem from="1732215318386" duration="10353000" />
       <workItem from="1732267344623" duration="3192000" />
-      <workItem from="1732446898706" duration="32711000" />
+      <workItem from="1732446898706" duration="33021000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <option name="createBranch" value="false" />
