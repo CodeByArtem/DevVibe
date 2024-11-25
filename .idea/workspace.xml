@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f87ce8e1-69b5-450d-8518-2bdfaa5aac49" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/matrix-background.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/[id]/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/projects/ProjectSections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/projects/ProjectSections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +21,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -50,8 +49,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\repositiry\portfolio\public\images\project" />
       <recent name="D:\repositiry\portfolio\public\images" />
+      <recent name="D:\repositiry\portfolio\public\images\project" />
       <recent name="D:\repositiry\portfolio\public\svg" />
       <recent name="D:\repositiry\portfolio\src\components\layout" />
       <recent name="D:\repositiry\portfolio\src\styles" />
@@ -90,7 +89,8 @@
       <workItem from="1732128216154" duration="16341000" />
       <workItem from="1732215318386" duration="10353000" />
       <workItem from="1732267344623" duration="3192000" />
-      <workItem from="1732446898706" duration="36613000" />
+      <workItem from="1732446898706" duration="37148000" />
+      <workItem from="1732557000528" duration="4785000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <option name="createBranch" value="false" />

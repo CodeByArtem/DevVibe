@@ -27,7 +27,7 @@ const Header: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link href="/projects" className="hover:text-green-400 transition duration-300">
+            <Link href="#projects" className="hover:text-green-400 transition duration-300">
               Projects
             </Link>
           </li>

@@ -9,7 +9,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'neon-green': '#39ff14', // Неоново-зеленый цвет
+      },
+      textShadow: {
+        'neon-green': '0 0 8px rgba(57, 255, 20, 1), 0 0 15px rgba(57, 255, 20, 0.8)',
+      },
+    },
   },
   plugins: [],
 }
