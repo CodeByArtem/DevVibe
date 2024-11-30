@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f87ce8e1-69b5-450d-8518-2bdfaa5aac49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/matrixconact.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sections/contact/ContactSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/contact/ContactSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/contact/ContactSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/hero/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/hero/HeroSection.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,9 @@
       <workItem from="1732267344623" duration="3192000" />
       <workItem from="1732446898706" duration="37148000" />
       <workItem from="1732557000528" duration="7610000" />
-      <workItem from="1732732439198" duration="6438000" />
+      <workItem from="1732732439198" duration="6592000" />
+      <workItem from="1732984541349" duration="1497000" />
+      <workItem from="1732999115255" duration="2964000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <option name="createBranch" value="false" />
