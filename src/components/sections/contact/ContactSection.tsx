@@ -3,7 +3,8 @@ import { FaInstagram, FaTiktok, FaLinkedin, FaTelegram } from 'react-icons/fa';
 
 const ContactSections: React.FC = () => {
   return (
-    <section className="relative min-h-screen bg-black flex flex-col items-center justify-center overflow-hidden">
+    <section id="contact"
+             className="relative min-h-screen bg-black flex flex-col items-center justify-center overflow-hidden">
       {/* Фоновое изображение */}
       <div
         style={{
