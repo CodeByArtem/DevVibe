@@ -82,7 +82,7 @@ const ProjectSection: React.FC = () => {
                     alt={project.title}
                     width={1440}
                     height={1000}
-                    className="w-full h-[350px] object-contain"
+                    className="w-full h-[350px] object-contain  lg:max-h-[300px]"
                   />
                   <div className="p-6">
                     <h3 className="text-xl md:text-2xl font-bold mb-6 text-black"
@@ -101,7 +101,7 @@ const ProjectSection: React.FC = () => {
                         href={project.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-neon-blue hover:text-red-400 transition-all duration-300 text-lg font-medium"
+                        className="text-blue-100 hover:text-red-600 transition-all duration-300 text-lg font-medium border-2 border-black hover:border-red-600 px-2 py-1 rounded-md"
                       >
                         <FaLink className="inline-block mr-2" />
                         Живая версия
@@ -110,7 +110,7 @@ const ProjectSection: React.FC = () => {
                         href={project.repoLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-neon-green hover:text-red-300 transition-all duration-300 text-lg font-medium"
+                        className="text-blue-100 hover:text-red-600 transition-all duration-300 text-lg font-medium border-2 border-black hover:border-red-600 px-2 py-1 rounded-md"
                       >
                         <FaGithub className="inline-block mr-2" />
                         Репозиторий
@@ -123,7 +123,7 @@ const ProjectSection: React.FC = () => {
           </Swiper>
 
           {/* Левая стрелка */}
-          <div className="absolute top-1/2 left-10 transform -translate-y-1/2 z-10">
+          <div className="absolute top-1/2 left-40 transform -translate-y-1/2 z-10">
             <button
               className="text-neon-green text-3xl bg-black bg-opacity-70 p-3 rounded-full shadow-lg hover:shadow-neon hover:text-white transition-all duration-300"
               onClick={() => swiperRef.current?.swiper.slidePrev()}
@@ -133,7 +133,7 @@ const ProjectSection: React.FC = () => {
           </div>
 
           {/* Правая стрелка */}
-          <div className="absolute top-1/2 right-10 transform -translate-y-1/2 z-10">
+          <div className="absolute top-1/2 right-40 transform -translate-y-1/2 z-10">
             <button
               className="text-neon-green text-3xl bg-black bg-opacity-70 p-3 rounded-full shadow-lg hover:shadow-neon hover:text-white transition-all duration-300"
               onClick={() => swiperRef.current?.swiper.slideNext()}

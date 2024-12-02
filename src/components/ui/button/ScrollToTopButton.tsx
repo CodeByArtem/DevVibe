@@ -1,7 +1,5 @@
-
 "use client"
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,9 +17,9 @@ const ScrollToTopButton = () => {
     isVisible && (
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-4 right-4 px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md transition duration-300 ease-in-out hover:bg-blue-600"
+        className="fixed bottom-8 right-8 w-16 h-16 bg-transparent text-green-500 border-2 border-green-500 rounded-full shadow-lg flex items-center justify-center transition duration-300 ease-in-out hover:bg-green-500 hover:text-black z-50"
       >
-        Наверх
+        <span className="text-4xl font-bold">&#8593;</span> {/* Стрелка вверх */}
       </button>
     )
   );

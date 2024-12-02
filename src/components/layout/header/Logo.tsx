@@ -12,7 +12,6 @@ const Logo: React.FC = () => {
     'Делаем мир удобнее с каждым шагом!',
   ];
 
-  // Массив с цветами для каждой фразы
   const colors = [
     'from-pink-500 via-red-500 to-yellow-500',
     'from-blue-500 via-indigo-500 to-purple-500',
@@ -26,24 +25,23 @@ const Logo: React.FC = () => {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Меняем фразы каждые 8 секунд
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-    }, 8000); // Каждые 8 секунд меняем фразу
+    }, 8000);
 
-    return () => clearInterval(intervalId); // Очищаем интервал, когда компонент размонтируется
-  }, [phrases.length]); // Пустой массив зависимостей
+    return () => clearInterval(intervalId);
+  }, [phrases.length]);
 
   const textToType = phrases[currentPhraseIndex];
-  const gradientColor = colors[currentPhraseIndex]; // Получаем цвет для текущей фразы
+  const gradientColor = colors[currentPhraseIndex];
 
   return (
     <div
       className="group flex items-center space-x-2 relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      suppressHydrationWarning // Добавлено suppressHydrationWarning
+      suppressHydrationWarning
     >
       <svg
         className="w-8 h-8 text-gradient transition-all duration-300 transform hover:scale-110"
@@ -64,18 +62,18 @@ const Logo: React.FC = () => {
       </svg>
 
       <span
-        className={`text-2xl font-bold tracking-wide bg-gradient-to-r ${gradientColor} bg-clip-text text-transparent transition-transform duration-[2000ms] ease-in-out group-hover:translate-x-[525px]`}
+        className={`text-2xl font-bold tracking-wide bg-gradient-to-r ${gradientColor} bg-clip-text text-transparent hidden md:inline-block`}
       >
         Full-Stack Legend
       </span>
 
-      {/* Эффект печатания с использованием typewriter-effect */}
       <div
-        className={`absolute left-7 text-lg bg-gradient-to-r ${gradientColor} bg-clip-text text-transparent whitespace-nowrap transform transition-all duration-500 ease-in-out`}
+        className={`absolute left-7 text-lg bg-gradient-to-r ${gradientColor} bg-clip-text text-transparent whitespace-nowrap transform transition-all duration-500 ease-in-out
+          md:transform-none`}
       >
         {isHovered && (
           <Typewriter
-            key={currentPhraseIndex} // Используем key для перерисовки компонента
+            key={currentPhraseIndex}
             onInit={(typewriter) => {
               typewriter
                 .typeString(textToType)
@@ -84,8 +82,8 @@ const Logo: React.FC = () => {
                 .start();
             }}
             options={{
-              delay: 75, // скорость печатания
-              cursor: '|', // курсор
+              delay: 75,
+              cursor: '|',
             }}
           />
         )}

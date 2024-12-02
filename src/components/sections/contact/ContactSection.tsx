@@ -34,44 +34,52 @@ const ContactSections: React.FC = () => {
 
         <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0">
           {/* Список ссылок */}
-          <div className="text-center md:text-left md:w-1/3 space-y-4 mb-8 md:mb-0">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-black text-xl hover:text-[#E4405F] hover:text-shadow-md text-shadow"
-            >
-              <FaInstagram className="text-2xl" />
-              <span>Instagram</span>
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-black text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow"
-            >
-              <FaTiktok className="text-2xl" />
-              <span>TikTok</span>
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-black text-xl hover:text-[#0A66C2] hover:text-shadow-md text-shadow"
-            >
-              <FaLinkedin className="text-2xl" />
-              <span>LinkedIn</span>
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-black text-xl hover:text-[#0088cc] hover:text-shadow-md text-shadow"
-            >
-              <FaTelegram className="text-2xl" />
-              <span>Telegram</span>
-            </a>
-          </div>
+          <ul className="text-center md:text-left md:w-1/3 space-y-4 mb-8 md:mb-0">
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-start space-x-2 text-black text-xl hover:text-[#E4405F] hover:text-shadow-md text-shadow"
+              >
+                <FaInstagram className="text-2xl" />
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-start space-x-2 text-black text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow"
+              >
+                <FaTiktok className="text-2xl" />
+                <span>TikTok</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-start space-x-2 text-black text-xl hover:text-[#0A66C2] hover:text-shadow-md text-shadow"
+              >
+                <FaLinkedin className="text-2xl" />
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-start space-x-2 text-black text-xl hover:text-[#0088cc] hover:text-shadow-md text-shadow"
+              >
+                <FaTelegram className="text-2xl" />
+                <span>Telegram</span>
+              </a>
+            </li>
+          </ul>
 
           {/* Форма */}
           <form className="space-y-4 md:w-1/3">

@@ -198,7 +198,7 @@ const HeroSection: React.FC = () => {
               {/* Подпись с эффектом свечения */}
               <span
                 className={`mt-2 text-lg text-black font-semibold transition-all duration-500 ${
-                  hoveredIcon === name ? 'text-xl text-green-500' : 'text-white'
+                  hoveredIcon === name ? 'text-xl text-neon-green' : 'text-white'
                 }`}
                 style={{ textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00' }}
               >
