@@ -6,7 +6,7 @@ import { SiNextdotjs } from 'react-icons/si'; // Иконка Next.js
 
 import Typewriter from 'typewriter-effect';
 
-const CHARACTERS = "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトホモヨョロヲゴゾドボポヴッンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:,.<>?/~`";
+const CHARACTERS = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトホモヨョロヲゴゾドボポヴッンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:,.<>?/~`';
 
 
 const HeroSection: React.FC = () => {
@@ -126,7 +126,7 @@ const HeroSection: React.FC = () => {
       {/* Canvas для матричной анимации */}
       <canvas id="matrix-canvas" className="absolute top-0 left-0 w-full h-full z-10" />
 
-      <div className="w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center z-20">
+      <div className="w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center z-20 mt-5 md:mt-0">
         <Image
           className="rounded-xl object-contain object-center shadow-lg shadow-green-500/50 glow-effect"
           src="/images/hotoroom.png"
@@ -144,12 +144,13 @@ const HeroSection: React.FC = () => {
       >
         {/* Печатающий заголовок */}
         <h1
-          className="text-3xl md:text-4xl font-bold mb-8 md:mb-16 text-white sm:mb-[30px] h-[80px] flex items-center justify-center"
+          className="text-xl sm:text-2xl md:text-2xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-white  h-[80px] flex items-center justify-center"
           style={{
             textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00',
             height: '80px', // фиксируем высоту для предотвращения прыжков
             overflow: 'hidden', // скрываем лишнее
           }}
+
         >
           <Typewriter
             options={{
@@ -165,7 +166,7 @@ const HeroSection: React.FC = () => {
 
         {/* Описание */}
         <p
-          className="text-lg md:text-xl mb-4 text-black font-bold"
+          className="text-lg md:text-xl mb-4  text-black font-bold"
           style={{
             textShadow:
               '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00',
@@ -175,7 +176,7 @@ const HeroSection: React.FC = () => {
         </p>
 
         {/* Иконки с подписями */}
-        <ul className="flex justify-evenly gap-4 md:gap-10 flex-wrap mt-2 md:mt-4">
+        <ul className="flex justify-center gap-8 md:gap-10 flex-wrap mt-2 md:mt-4">
           {icons.map(({ icon: Icon, color, name, label }) => (
             <li
               key={name}
@@ -191,7 +192,7 @@ const HeroSection: React.FC = () => {
                 style={{ marginTop: '-10px' }}
               >
                 <Icon
-                  className={`text-4xl ${color} sm:text-3xl md:text-5xl lg:text-5xl`} // разные размеры для разных экранов
+                  className={`text-3xl ${color} sm:text-2xl md:text-5xl lg:text-5xl`} // уменьшаем размер на мобильных
                 />
               </div>
 
@@ -202,11 +203,12 @@ const HeroSection: React.FC = () => {
                 }`}
                 style={{ textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00' }}
               >
-                {label}
-              </span>
+        {label}
+      </span>
             </li>
           ))}
         </ul>
+
       </div>
     </section>
   );

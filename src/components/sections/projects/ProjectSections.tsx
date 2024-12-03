@@ -18,7 +18,6 @@ interface Project {
 const ProjectSection: React.FC = () => {
   const swiperRef = useRef<SwiperRef | null>(null);
 
-
   const projects: Project[] = [
     {
       title: 'WebStudio 1',
@@ -51,15 +50,20 @@ const ProjectSection: React.FC = () => {
   ];
 
   return (
-    <section id="projects"
-             className="py-9 min-h-screen bg-black text-green-400 flex items-center justify-center"
-             style={{ backgroundImage: 'url(/images/matrix-background.webp)', backgroundSize: 'cover' }}
+    <section
+      id="projects"
+      className="py-9 min-h-screen bg-black text-green-400 flex items-center justify-center"
+      style={{ backgroundImage: 'url(/images/matrix-background.webp)', backgroundSize: 'cover' }}
     >
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl md:text-3xl font-extrabold mb-8 text-white drop-shadow-md"
-            style={{
-              textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00',
-            }}>Мои Проекты</h2>
+        <h2
+          className="text-4xl md:text-3xl font-extrabold mb-8 text-white drop-shadow-md"
+          style={{
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00',
+          }}
+        >
+          Мои Проекты
+        </h2>
 
         <div className="relative">
           <Swiper
@@ -82,11 +86,15 @@ const ProjectSection: React.FC = () => {
                     alt={project.title}
                     width={1440}
                     height={1000}
-                    className="w-full h-[350px] object-contain  lg:max-h-[300px]"
+                    className="w-full object-contain "
                   />
                   <div className="p-6">
-                    <h3 className="text-xl md:text-2xl font-bold mb-6 text-black"
-                        style={{ textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00' }}>{project.title}</h3>
+                    <h3
+                      className="text-xl md:text-2xl font-bold mb-6 text-black"
+                      style={{ textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00' }}
+                    >
+                      {project.title}
+                    </h3>
                     <p
                       className="text-lg md:text-xl mb-4 text-black font-bold"
                       style={{
@@ -96,12 +104,12 @@ const ProjectSection: React.FC = () => {
                     >
                       {project.description}
                     </p>
-                    <div className="flex justify-around">
+                    <div className="flex justify-around gap-4 sm:gap-6">
                       <a
                         href={project.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-100 hover:text-red-600 transition-all duration-300 text-lg font-medium border-2 border-black hover:border-red-600 px-2 py-1 rounded-md"
+                        className="text-blue-100 hover:text-red-600 transition-all duration-300 text-sm sm:text-lg font-medium border-2 border-black hover:border-red-600 px-2 py-1 rounded-md"
                       >
                         <FaLink className="inline-block mr-2" />
                         Живая версия
@@ -110,7 +118,7 @@ const ProjectSection: React.FC = () => {
                         href={project.repoLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-100 hover:text-red-600 transition-all duration-300 text-lg font-medium border-2 border-black hover:border-red-600 px-2 py-1 rounded-md"
+                        className="text-blue-100 hover:text-red-600 transition-all duration-300 text-sm sm:text-lg font-medium border-2 border-black hover:border-red-600 px-2 py-1 rounded-md"
                       >
                         <FaGithub className="inline-block mr-2" />
                         Репозиторий
@@ -123,9 +131,10 @@ const ProjectSection: React.FC = () => {
           </Swiper>
 
           {/* Левая стрелка */}
-          <div className="absolute top-1/2 left-40 transform -translate-y-1/2 z-10">
+          <div
+            className="absolute mobile:top-[23%] sm:top-1/2 left-8 transform -translate-y-1/2 z-10 sm:left-18 md:left-60 mt-12 ">
             <button
-              className="text-neon-green text-3xl bg-black bg-opacity-70 p-3 rounded-full shadow-lg hover:shadow-neon hover:text-white transition-all duration-300"
+              className="text-neon-green text-xl bg-black bg-opacity-70 p-3 rounded-full shadow-lg hover:shadow-neon hover:text-white transition-all duration-300 mobile:text-xl mobile:p-2"
               onClick={() => swiperRef.current?.swiper.slidePrev()}
             >
               &#8592;
@@ -133,9 +142,10 @@ const ProjectSection: React.FC = () => {
           </div>
 
           {/* Правая стрелка */}
-          <div className="absolute top-1/2 right-40 transform -translate-y-1/2 z-10">
+          <div
+            className="absolute mobile:top-[23%] sm:top-1/2 right-8 transform -translate-y-1/2 z-10 sm:right-16 md:right-60 mt-12">
             <button
-              className="text-neon-green text-3xl bg-black bg-opacity-70 p-3 rounded-full shadow-lg hover:shadow-neon hover:text-white transition-all duration-300"
+              className="text-neon-green text-xl bg-black bg-opacity-70 p-3 rounded-full shadow-lg hover:shadow-neon hover:text-white transition-all duration-300 mobile:text-xl mobile:p-2"
               onClick={() => swiperRef.current?.swiper.slideNext()}
             >
               &#8594;

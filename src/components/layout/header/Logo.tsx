@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import Typewriter from 'typewriter-effect';
+import React, { useState, useEffect, useCallback } from 'react';
+import Typewriter, { TypewriterClass } from 'typewriter-effect';
 
 const Logo: React.FC = () => {
   const phrases = [
@@ -22,13 +22,29 @@ const Logo: React.FC = () => {
     'from-teal-400 via-blue-400 to-purple-500',
   ];
 
-  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState<number>(0);
+  const [isClicked, setIsClicked] = useState<boolean>(false);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+    }
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-    }, 8000);
+    }, 8000); // Меняем фразу каждые 8 секунд
 
     return () => clearInterval(intervalId);
   }, [phrases.length]);
@@ -36,11 +52,31 @@ const Logo: React.FC = () => {
   const textToType = phrases[currentPhraseIndex];
   const gradientColor = colors[currentPhraseIndex];
 
+  const handleClick = () => {
+    setIsClicked((prevState) => !prevState); // Переключаем состояние по клику
+  };
+
+  const TypewriterEffect = useCallback(() => {
+    return (
+      <Typewriter
+        onInit={(typewriter: TypewriterClass) => {
+          typewriter
+            .typeString(textToType)
+            .pauseFor(2000)
+            .deleteAll()
+            .start();
+        }}
+        options={{
+          delay: 75,
+          cursor: '|',
+        }}
+      />
+    );
+  }, [textToType]);
+
   return (
     <div
       className="group flex items-center space-x-2 relative"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       suppressHydrationWarning
     >
       <svg
@@ -61,33 +97,26 @@ const Logo: React.FC = () => {
         <use href="/svg/symbol-defs.svg#icon-logo" />
       </svg>
 
-      <span
-        className={`text-2xl font-bold tracking-wide bg-gradient-to-r ${gradientColor} bg-clip-text text-transparent hidden md:inline-block`}
-      >
-        Full-Stack Legend
-      </span>
+      {windowWidth > 1200 && (
+        <span
+          className={`text-2xl font-bold tracking-wide bg-gradient-to-r ${gradientColor} bg-clip-text text-transparent`}
+          style={{
+            transform: isClicked ? 'translateX(400px)' : 'translateX(0)',
+            transition: 'transform 0.5s ease-in-out',
+          }}
+          onClick={handleClick} // Обработчик клика
+        >
+          Full-Stack Legend
+        </span>
+      )}
 
-      <div
-        className={`absolute left-7 text-lg bg-gradient-to-r ${gradientColor} bg-clip-text text-transparent whitespace-nowrap transform transition-all duration-500 ease-in-out
-          md:transform-none`}
-      >
-        {isHovered && (
-          <Typewriter
-            key={currentPhraseIndex}
-            onInit={(typewriter) => {
-              typewriter
-                .typeString(textToType)
-                .pauseFor(2000)
-                .deleteAll()
-                .start();
-            }}
-            options={{
-              delay: 75,
-              cursor: '|',
-            }}
-          />
-        )}
-      </div>
+      {windowWidth > 1200 && (
+        <div
+          className={`absolute left-7 text-lg bg-gradient-to-r ${gradientColor} bg-clip-text text-transparent whitespace-nowrap`}
+        >
+          {isClicked && <TypewriterEffect />}
+        </div>
+      )}
     </div>
   );
 };

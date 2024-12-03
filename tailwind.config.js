@@ -10,6 +10,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'mobile': { max: '649px' },
+        display: {
+          contents: 'contents', // добавляем display: contents
+        },
+      },
+
       colors: {
         'neon-green': '#39ff14',
 

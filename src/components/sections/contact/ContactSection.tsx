@@ -40,7 +40,7 @@ const ContactSections: React.FC = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-start space-x-2 text-black text-xl hover:text-[#E4405F] hover:text-shadow-md text-shadow"
+                className="inline-flex items-center justify-start space-x-2 text-[#E4405F] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold"
               >
                 <FaInstagram className="text-2xl" />
                 <span>Instagram</span>
@@ -51,7 +51,7 @@ const ContactSections: React.FC = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-start space-x-2 text-black text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow"
+                className="inline-flex items-center justify-start space-x-2 text-[#010101] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold"
               >
                 <FaTiktok className="text-2xl" />
                 <span>TikTok</span>
@@ -62,7 +62,7 @@ const ContactSections: React.FC = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-start space-x-2 text-black text-xl hover:text-[#0A66C2] hover:text-shadow-md text-shadow"
+                className="inline-flex items-center justify-start space-x-2 text-[#0A66C2] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold"
               >
                 <FaLinkedin className="text-2xl" />
                 <span>LinkedIn</span>
@@ -73,13 +73,14 @@ const ContactSections: React.FC = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-start space-x-2 text-black text-xl hover:text-[#0088cc] hover:text-shadow-md text-shadow"
+                className="inline-flex items-center justify-start space-x-2 text-[#0088cc] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold"
               >
                 <FaTelegram className="text-2xl" />
                 <span>Telegram</span>
               </a>
             </li>
           </ul>
+
 
           {/* Форма */}
           <form className="space-y-4 md:w-1/3">
