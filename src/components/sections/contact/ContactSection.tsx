@@ -37,7 +37,7 @@ const ContactSections: React.FC = () => {
           <ul className="text-center md:text-left md:w-1/3 space-y-4 mb-8 md:mb-0">
             <li>
               <a
-                href="#"
+                href="https://www.instagram.com/angelic._.heart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-start space-x-2 text-[#E4405F] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold"
@@ -48,7 +48,7 @@ const ContactSections: React.FC = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.tiktok.com/@angelic_heart?_t=8rwOvjqoDJQ&_r=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-start space-x-2 text-[#010101] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold"
@@ -59,7 +59,7 @@ const ContactSections: React.FC = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/artem-zhuravlov-713547259/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-start space-x-2 text-[#0A66C2] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold"
@@ -70,7 +70,7 @@ const ContactSections: React.FC = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="https://t.me/Artem_Smailik"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-start space-x-2 text-[#0088cc] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold"
