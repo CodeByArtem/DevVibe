@@ -170,10 +170,10 @@ const ProjectSection: React.FC = () => {
 
           {/* Левая стрелка */}
           <div
-            className="absolute mobile:top-[23%] sm:top-1/2 left-8 transform -translate-y-1/2 z-10 sm:left-18 md:left-60 mt-12 lg:mt-28">
+            className="absolute mobile:top-[20%] sm:top-1/4 left-8 transform -translate-y-1/2 z-10   mt-12 lg:mt-28">
             <button
               className="text-neon-green text-xl bg-black bg-opacity-70 p-3 rounded-full shadow-lg hover:shadow-neon hover:text-white transition-all duration-300 mobile:text-xl mobile:p-2 mt-2
-      lg:text-3xl "
+      lg:text-5xl "
               onClick={() => swiperRef.current?.swiper.slidePrev()}
             >
               &#8592;
@@ -182,10 +182,10 @@ const ProjectSection: React.FC = () => {
 
           {/* Правая стрелка */}
           <div
-            className="absolute mobile:top-[23%] sm:top-1/2 right-8 transform -translate-y-1/2 z-10 sm:right-16 md:right-60 mt-12 lg:mt-28">
+            className="absolute mobile:top-[20%] sm:top-1/4 right-8 transform -translate-y-1/2 z-10   mt-12 lg:mt-28">
             <button
               className="text-neon-green text-xl bg-black bg-opacity-70 p-3 rounded-full shadow-lg hover:shadow-neon hover:text-white transition-all duration-300 mobile:text-xl mobile:p-2 mt-2
-      lg:text-3xl "
+      lg:text-5xl "
               onClick={() => swiperRef.current?.swiper.slideNext()}
             >
               &#8594;

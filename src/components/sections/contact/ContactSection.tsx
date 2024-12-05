@@ -188,25 +188,7 @@ const ContactSections: React.FC = () => {
       </section>
 
       {/* Добавляем ToastContainer в компонент */}
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        style={{
-          zIndex: 9999, // Убедитесь, что тосты всегда находятся поверх других элементов
-          padding: '10px', // Даем отступы, чтобы не перекрывались с краями экрана
-          top: '20px', // Установите верхний отступ для тостов
-          left: '50%', // Центрируем тосты по горизонтали
-          transform: 'translateX(-50%)', // Центрирование
-        }}
-      />
-
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
     </>
   );
 };
