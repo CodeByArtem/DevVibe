@@ -123,7 +123,7 @@ const ProjectSection: React.FC = () => {
                     alt={project.title}
                     width={1440}
                     height={1000}
-                    className="w-full  h-96 2xl:h-[700px] object-contain "
+                    className="w-full  lg:h-96 2xl:h-[700px] object-contain "
                   />
                   <div className="p-6">
                     <h3
@@ -170,9 +170,10 @@ const ProjectSection: React.FC = () => {
 
           {/* Левая стрелка */}
           <div
-            className="absolute mobile:top-[23%] sm:top-1/2 left-8 transform -translate-y-1/2 z-10 sm:left-18 md:left-60 mt-12 lg:mt-28 ">
+            className="absolute mobile:top-[23%] sm:top-1/2 left-8 transform -translate-y-1/2 z-10 sm:left-18 md:left-60 mt-12 lg:mt-28">
             <button
-              className="text-neon-green text-xl bg-black bg-opacity-70 p-3 rounded-full shadow-lg hover:shadow-neon hover:text-white transition-all duration-300 mobile:text-xl mobile:p-2 mt-2 "
+              className="text-neon-green text-xl bg-black bg-opacity-70 p-3 rounded-full shadow-lg hover:shadow-neon hover:text-white transition-all duration-300 mobile:text-xl mobile:p-2 mt-2
+      lg:text-3xl "
               onClick={() => swiperRef.current?.swiper.slidePrev()}
             >
               &#8592;
@@ -183,7 +184,8 @@ const ProjectSection: React.FC = () => {
           <div
             className="absolute mobile:top-[23%] sm:top-1/2 right-8 transform -translate-y-1/2 z-10 sm:right-16 md:right-60 mt-12 lg:mt-28">
             <button
-              className="text-neon-green text-xl bg-black bg-opacity-70 p-3 rounded-full shadow-lg hover:shadow-neon hover:text-white transition-all duration-300 mobile:text-xl mobile:p-2 mt-2  "
+              className="text-neon-green text-xl bg-black bg-opacity-70 p-3 rounded-full shadow-lg hover:shadow-neon hover:text-white transition-all duration-300 mobile:text-xl mobile:p-2 mt-2
+      lg:text-3xl "
               onClick={() => swiperRef.current?.swiper.slideNext()}
             >
               &#8594;

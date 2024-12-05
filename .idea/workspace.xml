@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f87ce8e1-69b5-450d-8518-2bdfaa5aac49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/project/fresh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/project/lipton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/project/phone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/project/photography.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/project/portfolio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/project/travel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/project/venom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/contact/ContactSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/contact/ContactSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/projects/ProjectSections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/projects/ProjectSections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/api/contact.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +52,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\repositiry\portfolio\public\images\project" />
+      <recent name="D:\repositiry\portfolio\src" />
       <recent name="D:\repositiry\portfolio\src\pages" />
+      <recent name="D:\repositiry\portfolio\public\images\project" />
       <recent name="D:\repositiry\portfolio\src\components" />
       <recent name="D:\repositiry\portfolio\public\images" />
-      <recent name="D:\repositiry\portfolio\public\svg" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -101,7 +100,9 @@
       <workItem from="1733078430521" duration="7093000" />
       <workItem from="1733165871371" duration="12427000" />
       <workItem from="1733245004658" duration="18908000" />
-      <workItem from="1733328882465" duration="11923000" />
+      <workItem from="1733328882465" duration="12271000" />
+      <workItem from="1733346088339" duration="1820000" />
+      <workItem from="1733408330109" duration="17494000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <option name="createBranch" value="false" />

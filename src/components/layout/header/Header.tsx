@@ -6,38 +6,96 @@ import MobileMenu from './MobileMenu';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastInteractionTime, setLastInteractionTime] = useState<number>(Date.now());
+  const [isAtTop, setIsAtTop] = useState(true); // Для отслеживания нахождения на верхней части страницы
 
-  // Функция для переключения состояния меню
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Отключение прокрутки страницы, когда меню открыто
+  const handleLogoClick = (event: React.MouseEvent) => {
+    event.preventDefault();
+    window.location.reload(); // Обновляем страницу
+  };
+
+  const handleUserActivity = () => {
+    setLastInteractionTime(Date.now()); // Обновляем время последней активности
+    if (!isHeaderVisible) {
+      setIsHeaderVisible(true); // Показываем хедер, если была активность
+    }
+  };
+
+  // Отслеживаем прокрутку страницы
+  const handleScroll = () => {
+    if (window.scrollY === 0) {
+      setIsAtTop(true); // Находимся в верхней части страницы
+    } else {
+      setIsAtTop(false); // Страница прокручена вниз
+    }
+  };
+
+  // Отслеживаем касания на мобильных устройствах
+  const handleTouchStart = () => {
+    setLastInteractionTime(Date.now()); // Обновляем время последней активности
+    if (!isHeaderVisible) {
+      setIsHeaderVisible(true); // Показываем хедер при касании экрана
+    }
+  };
+
+  useEffect(() => {
+    // Добавляем обработчики событий для активности пользователя
+    document.addEventListener('mousemove', handleUserActivity);
+    document.addEventListener('keydown', handleUserActivity);
+    window.addEventListener('scroll', handleScroll); // Отслеживаем прокрутку
+    window.addEventListener('touchstart', handleTouchStart); // Отслеживаем касания для мобильных устройств
+
+    const interval = setInterval(() => {
+      // Если прошло больше 3 секунд без активности на мобильных устройствах (меньше времени)
+      if (Date.now() - lastInteractionTime > 3000 && !isAtTop) {
+        setIsHeaderVisible(false); // Скрываем хедер
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(interval); // Очистка интервала при размонтировании компонента
+      document.removeEventListener('mousemove', handleUserActivity);
+      document.removeEventListener('keydown', handleUserActivity);
+      window.removeEventListener('scroll', handleScroll); // Убираем обработчик прокрутки
+      window.removeEventListener('touchstart', handleTouchStart); // Убираем обработчик касаний
+    };
+  }, [lastInteractionTime, isAtTop]);
+
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = 'hidden'; // Отключаем скролл
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'auto'; // Включаем скролл
+      document.body.style.overflow = 'auto';
     }
 
     return () => {
-      document.body.style.overflow = 'auto'; // Восстанавливаем скролл при размонтировании
+      document.body.style.overflow = 'auto';
     };
   }, [isMenuOpen]);
 
   return (
-    <header className="bg-gray-800 text-white p-4 shadow-md">
+    <header
+      className={`sticky top-0 z-50 bg-gray-800 bg-opacity-75 text-white p-4 shadow-md backdrop-blur-sm transition-all duration-300 ${
+        isHeaderVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`}
+    >
       <nav className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Логотип */}
-        <Link
+        <a
           href="/"
           aria-label="Home"
           className="block md:pointer-events-auto pointer-events-none"
+          onClick={handleLogoClick}
         >
           <div className="flex items-center space-x-2">
             <Logo />
           </div>
-        </Link>
+        </a>
 
         {/* Навигация для больших экранов */}
         <ul className="hidden md:flex space-x-8 text-lg font-medium">
