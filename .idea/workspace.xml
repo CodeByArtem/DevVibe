@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f87ce8e1-69b5-450d-8518-2bdfaa5aac49" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/MobileMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/MobileMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/contact/ContactSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/contact/ContactSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/projects/ProjectSections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/projects/ProjectSections.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
-    </list>
+    <list default="true" id="f87ce8e1-69b5-450d-8518-2bdfaa5aac49" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +92,7 @@
       <workItem from="1733245004658" duration="18908000" />
       <workItem from="1733328882465" duration="12271000" />
       <workItem from="1733346088339" duration="1820000" />
-      <workItem from="1733408330109" duration="29149000" />
+      <workItem from="1733408330109" duration="29359000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <option name="createBranch" value="false" />
