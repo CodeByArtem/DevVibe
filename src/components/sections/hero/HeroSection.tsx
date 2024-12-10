@@ -135,7 +135,7 @@ const HeroSection: React.FC = () => {
           width={564}
           height={1280}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          priority
+          loading="lazy"
         />
       </div>
 
