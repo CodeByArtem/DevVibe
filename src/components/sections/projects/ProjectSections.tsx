@@ -94,7 +94,7 @@ const ProjectSection: React.FC = () => {
     >
       <div className="container mx-auto text-center">
         <h2
-          className="text-4xl md:text-3xl font-extrabold mb-8 text-white drop-shadow-md"
+          className="text-4xl md:text-3xl font-extrabold mb-8 text-white drop-shadow-md mt-10"
           style={{
             textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00',
           }}

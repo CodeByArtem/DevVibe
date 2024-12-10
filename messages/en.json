@@ -1,0 +1,26 @@
+{
+  "Header": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "HeroSection": {
+    "greeting": "Hello, I am Artem, a Full-Stack Developer",
+    "description": "Web development with a focus on quality, performance, and customer convenience",
+    "html": "HTML",
+    "css": "CSS",
+    "node": "Node.js",
+    "js": "JavaScript",
+    "git": "Git",
+    "next": "Next.js",
+    "react": "React"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {Русский} en {English} other {Русский}}"
+
+}
+}
+
+

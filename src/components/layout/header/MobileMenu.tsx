@@ -21,14 +21,26 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen, toggleMenu }) => {
       }
     };
 
-    // Добавляем слушатель событий
     document.addEventListener('mousedown', handleClickOutside);
 
-    // Очистка при размонтировании
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [toggleMenu]);
+
+  // Плавная прокрутка для якорных ссылок и закрытие меню
+  const handleSmoothScroll = (event: React.MouseEvent) => {
+    const target = event.target as HTMLElement;
+    if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
+      event.preventDefault();
+      const id = target.getAttribute('href')?.substring(1);
+      const element = document.getElementById(id!);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        toggleMenu(); // Закрыть меню после перехода
+      }
+    }
+  };
 
   return (
     <div className="relative">
@@ -60,7 +72,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen, toggleMenu }) => {
             width: '50vw',
             height: '100vh',
             position: 'fixed',
-            transition: 'transform 0.5s ease-out, opacity 0.5s ease-out',
           }}
         >
           {/* Кнопка закрытия меню */}
@@ -87,9 +98,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen, toggleMenu }) => {
           <ul className="space-y-6 text-3xl font-medium text-center mt-40">
             <li>
               <Link
-                href="/"
+                href="#header"
                 className="hover:text-green-400 focus:text-green-400 transition duration-300"
-                onClick={toggleMenu} // Закрытие меню при клике
+                onClick={handleSmoothScroll} // Плавная прокрутка и закрытие меню
               >
                 Home
               </Link>
@@ -98,7 +109,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen, toggleMenu }) => {
               <Link
                 href="#about"
                 className="hover:text-green-400 focus:text-green-400 transition duration-300"
-                onClick={toggleMenu} // Закрытие меню при клике
+                onClick={handleSmoothScroll} // Плавная прокрутка и закрытие меню
               >
                 About
               </Link>
@@ -107,7 +118,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen, toggleMenu }) => {
               <Link
                 href="#projects"
                 className="hover:text-green-400 focus:text-green-400 transition duration-300"
-                onClick={toggleMenu} // Закрытие меню при клике
+                onClick={handleSmoothScroll} // Плавная прокрутка и закрытие меню
               >
                 Projects
               </Link>
@@ -116,7 +127,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen, toggleMenu }) => {
               <Link
                 href="#contact"
                 className="hover:text-green-400 focus:text-green-400 transition duration-300"
-                onClick={toggleMenu} // Закрытие меню при клике
+                onClick={handleSmoothScroll} // Плавная прокрутка и закрытие меню
               >
                 Contact
               </Link>

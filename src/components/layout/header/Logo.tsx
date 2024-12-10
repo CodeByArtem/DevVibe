@@ -52,7 +52,9 @@ const Logo: React.FC = () => {
   const textToType = phrases[currentPhraseIndex];
   const gradientColor = colors[currentPhraseIndex];
 
-  const handleClick = () => {
+  const handleClick = (event: React.MouseEvent) => {
+    event.preventDefault(); // Предотвращаем стандартное поведение
+    event.stopPropagation(); // Останавливаем распространение события
     setIsClicked((prevState) => !prevState); // Переключаем состояние по клику
   };
 
@@ -79,6 +81,7 @@ const Logo: React.FC = () => {
       className="group flex items-center space-x-2 relative"
       suppressHydrationWarning
     >
+
       <svg
         className="w-8 h-8 text-gradient transition-all duration-300 transform hover:scale-110"
         xmlns="http://www.w3.org/2000/svg"

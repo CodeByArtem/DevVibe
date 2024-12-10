@@ -1,0 +1,25 @@
+{
+  "Header": {
+    "home": "Главная",
+    "about": "О нас",
+    "projects": "Проекты",
+    "contact": "Контакты"
+  },
+  "HeroSection": {
+    "greeting": "Привет, я Артем, Full-Stack Разработчик",
+    "description": "Веб-разработка с акцентом на качество, производительность и удобство для клиента.",
+      "html": "HTML",
+      "css": "CSS",
+      "node": "Node.js",
+      "js": "JavaScript",
+      "git": "Git",
+      "next": "Next.js",
+      "react": "React"
+    },
+  "LocaleSwitcher": {
+    "label": "Изменить язык",
+    "locale": "{locale, select, de {Русский} en {English} other {Русский}}"
+
+  }
+  }
+

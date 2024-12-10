@@ -23,20 +23,29 @@ body {
 .rotate-y-180 {
     transform: rotateY(180deg);
 }
+
 .glow-effect {
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.7);
 }
+
 /* Для свечения текста */
 
 /* Анимация для свечения */
 @keyframes glowing {
-    0% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00; }
-    50% { text-shadow: 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00; }
-    100% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00; }
+    0% {
+        text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00;
+    }
+    50% {
+        text-shadow: 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00;
+    }
+    100% {
+        text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00;
+    }
 }
-html {
-    scroll-behavior: smooth;
+:root {
+    scroll-padding-top: 80px; /* Замените на высоту вашего хедера */
 }
+
 
 
 

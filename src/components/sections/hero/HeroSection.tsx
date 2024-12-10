@@ -5,13 +5,14 @@ import { FaCss3Alt, FaGit, FaHtml5, FaJsSquare, FaNodeJs, FaReact } from 'react-
 import { SiNextdotjs } from 'react-icons/si'; // Иконка Next.js
 
 import Typewriter from 'typewriter-effect';
+import { useTranslations } from 'next-intl';
 
 const CHARACTERS = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトホモヨョロヲゴゾドボポヴッンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:,.<>?/~`';
 
 
 const HeroSection: React.FC = () => {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
-
+  const t = useTranslations('HeroSection');
   const handleMouseEnter = (icon: string) => {
     setHoveredIcon(icon);
   };
@@ -21,13 +22,13 @@ const HeroSection: React.FC = () => {
   };
 
   const icons = [
-    { icon: FaHtml5, color: 'text-orange-500', name: 'html', label: 'HTML' },
-    { icon: FaCss3Alt, color: 'text-blue-600', name: 'css', label: 'CSS' },
-    { icon: FaNodeJs, color: 'text-green-500', name: 'node', label: 'Node.js' },
-    { icon: FaJsSquare, color: 'text-yellow-500', name: 'js', label: 'JavaScript' },
-    { icon: FaGit, color: 'text-red-600', name: 'git', label: 'Git' },
-    { icon: SiNextdotjs, color: 'text-blue-100', name: 'next', label: 'Next.js' },
-    { icon: FaReact, color: 'text-blue-500', name: 'react', label: 'React' }, // Добавим React
+    { icon: FaHtml5, color: 'text-orange-500', name: 'html', label: t('html') },
+    { icon: FaCss3Alt, color: 'text-blue-600', name: 'css', label: t('css') },
+    { icon: FaNodeJs, color: 'text-green-500', name: 'node', label: t('node') },
+    { icon: FaJsSquare, color: 'text-yellow-500', name: 'js', label: t('js') },
+    { icon: FaGit, color: 'text-red-600', name: 'git', label: t('git') },
+    { icon: SiNextdotjs, color: 'text-blue-100', name: 'next', label: t('next') },
+    { icon: FaReact, color: 'text-blue-500', name: 'react', label: t('react') },
   ];
 
   useEffect(() => {
@@ -112,8 +113,8 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section
-      className="text-white flex flex-col md:flex-row items-center justify-center px-6 pb-10 relative"
+    <section   id="header"
+               className="text-white flex flex-col md:flex-row items-center justify-center px-6 pb-10 relative"
       style={{
         backgroundImage: 'url(/images/aboutmatrix.webp)',
         backgroundSize: 'cover',
@@ -126,7 +127,7 @@ const HeroSection: React.FC = () => {
       {/* Canvas для матричной анимации */}
       <canvas id="matrix-canvas" className="absolute top-0 left-0 w-full h-full z-10" />
 
-      <div className="w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center z-20 mt-5 md:mt-0">
+      <div className=" w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center z-20 mt-5 md:mt-0">
         <Image
           className="rounded-xl object-contain object-center shadow-lg shadow-green-500/50 glow-effect"
           src="/images/hotoroom.png"
@@ -154,7 +155,7 @@ const HeroSection: React.FC = () => {
         >
           <Typewriter
             options={{
-              strings: ['Привет, я Артем, Full-Stack Разработчик'],
+              strings: [t('greeting')],
               loop: false,
               autoStart: true,
               deleteSpeed: Infinity,
@@ -172,7 +173,7 @@ const HeroSection: React.FC = () => {
               '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00',
           }}
         >
-          Веб-разработка с акцентом на качество, производительность и удобство для клиента.
+          {t('description')}
         </p>
 
         {/* Иконки с подписями */}

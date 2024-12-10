@@ -1,22 +1,39 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
-import Link from 'next/link';
+
 import Logo from './Logo';
 import MobileMenu from './MobileMenu';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
+import LocaleSwitcher from '@/components/ui/button/LocaleSwitcher';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastInteractionTime, setLastInteractionTime] = useState<number>(Date.now());
   const [isAtTop, setIsAtTop] = useState(true); // Для отслеживания нахождения на верхней части страницы
-
+  const t = useTranslations('Header');
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
   const handleLogoClick = (event: React.MouseEvent) => {
     event.preventDefault();
-    window.location.reload(); // Обновляем страницу
+    // Сохраняем поведение перехода по ссылке, но без перезагрузки страницы
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth', // Плавная прокрутка
+    });
   };
-
+  const handleAnchorClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth', // Плавная прокрутка
+        block: 'start', // Прокрутка к началу элемента
+      });
+    }
+  };
   // Обновляем время последней активности и показываем хедер, если была активность
   const handleUserActivity = useCallback(() => {
     setLastInteractionTime(Date.now());
@@ -58,10 +75,9 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-gray-800 bg-opacity-75 text-white p-4 shadow-md backdrop-blur-sm transition-all duration-300 ${isHeaderVisible || isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+      className={`sticky  top-0 z-50 bg-gray-800 bg-opacity-75 text-white p-4 shadow-md backdrop-blur-sm transition-all duration-300 ${isHeaderVisible || isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
     >
-      <nav className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Логотип */}
+      <nav className="max-w-7xl mx-auto flex justify-between items-center ">
         <Link
           href="/"
           aria-label="Home"
@@ -74,29 +90,33 @@ const Header: React.FC = () => {
         </Link>
 
         {/* Навигация для больших экранов */}
-        <ul className="hidden md:flex space-x-8 text-lg font-medium">
+        <ul className="hidden md:flex space-x-8 text-lg font-medium ml-auto mr-4 ">
           <li>
-            <Link href="#home" className="hover:text-green-400 transition duration-300">
-              Home
+            <Link href="#header" className="hover:text-green-400 transition duration-300"
+                  onClick={(e) => handleAnchorClick(e, 'header')}>
+              {t('home')}
             </Link>
           </li>
           <li>
-            <Link href="#about" className="hover:text-green-400 transition duration-300">
-              About
+            <Link href="#about" className="hover:text-green-400 transition duration-300"
+                  onClick={(e) => handleAnchorClick(e, 'about')}>
+              {t('about')}
             </Link>
           </li>
           <li>
-            <Link href="#projects" className="hover:text-green-400 transition duration-300">
-              Projects
+            <Link href="#projects" className="hover:text-green-400 transition duration-300"
+                  onClick={(e) => handleAnchorClick(e, 'projects')}>
+              {t('projects')}
             </Link>
           </li>
           <li>
-            <Link href="#contact" className="hover:text-green-400 transition duration-300">
-              Contact
+            <Link href="#contact" className="hover:text-green-400 transition duration-300"
+                  onClick={(e) => handleAnchorClick(e, 'contact')}>
+              {t('contact')}
             </Link>
           </li>
         </ul>
-
+        <LocaleSwitcher />
         {/* Бургер-меню для мобильных устройств */}
         <div className="md:hidden">
           <MobileMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
