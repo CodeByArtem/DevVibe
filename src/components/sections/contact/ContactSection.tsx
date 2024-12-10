@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import { FaInstagram, FaTiktok, FaLinkedin, FaTelegram } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';  // Импортируем ToastContainer
-import 'react-toastify/dist/ReactToastify.css';  // Подключаем стили для тостов
+import 'react-toastify/dist/ReactToastify.css';
+import { useTranslations } from 'next-intl';
 
 const ContactSections: React.FC = () => {
+  const t = useTranslations('ContactSections');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,17 +32,17 @@ const ContactSections: React.FC = () => {
     let isValid = true;
 
     if (!formData.name) {
-      formErrors.name = 'Пожалуйста, введите ваше имя';
+      formErrors.name = t('errors.name');
       isValid = false;
     }
 
     if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
-      formErrors.email = 'Пожалуйста, введите корректный email';
+      formErrors.email = t('errors.email');
       isValid = false;
     }
 
     if (!formData.message) {
-      formErrors.message = 'Пожалуйста, введите сообщение';
+      formErrors.message = t('errors.message');
       isValid = false;
     }
 
@@ -77,13 +79,13 @@ const ContactSections: React.FC = () => {
 
       if (response.ok) {
         setFormData({ name: '', email: '', message: '' });
-        toast.success('Сообщение отправлено успешно!');  // Тост об успешной отправке
+        toast.success(t('successMessage'));   // Тост об успешной отправке
       } else {
-        toast.error(data.error || 'Произошла ошибка при отправке');  // Тост об ошибке
+        toast.error(data.error || t('errorMessage'));  // Тост об ошибке
       }
     } catch (error) {
       console.error('Ошибка при отправке формы:', error);
-      toast.error('Ошибка сервера');  // Тост ошибки сервера
+      toast.error(t('serverError'));  // Тост ошибки сервера
     } finally {
       setIsSubmitting(false);
       console.log('Отправка завершена');
@@ -106,36 +108,42 @@ const ContactSections: React.FC = () => {
 
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 py-12" style={{ textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00' }}>
           <div className="text-center mb-8">
-            <h2 className="text-4xl md:text-3xl font-extrabold mb-8 text-white drop-shadow-md">Свяжитесь со мной</h2>
+            <h2 className="text-4xl md:text-3xl font-extrabold mb-8 text-white drop-shadow-md">{t('header')}</h2>
             <p className="text-lg md:text-xl mb-4 text-black font-bold" style={{ textShadow: '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00' }}>
-              Я всегда готов помочь
+              {t('subheader')}
             </p>
           </div>
 
           <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0">
             <ul className="text-center md:text-left md:w-1/3 space-y-4 mb-8 md:mb-0">
               <li>
-                <a href="https://www.instagram.com/angelic._.heart" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-start space-x-2 text-[#E4405F] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold">
+                <a href="https://www.instagram.com/angelic._.heart" target="_blank" rel="noopener noreferrer"
+                   className="inline-flex items-center justify-start space-x-2 text-[#E4405F] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold">
                   <FaInstagram className="text-2xl" />
-                  <span>Instagram</span>
+                  <span>{t('instagram')}</span>
                 </a>
               </li>
               <li>
-                <a href="https://www.tiktok.com/@angelic_heart?_t=8rwOvjqoDJQ&_r=1" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-start space-x-2 text-[#010101] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold">
+                <a href="https://www.tiktok.com/@angelic_heart?_t=8rwOvjqoDJQ&_r=1" target="_blank"
+                   rel="noopener noreferrer"
+                   className="inline-flex items-center justify-start space-x-2 text-[#010101] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold">
                   <FaTiktok className="text-2xl" />
-                  <span>TikTok</span>
+                  <span>{t('tiktok')}</span>
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/artem-zhuravlov-713547259/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-start space-x-2 text-[#0A66C2] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold">
+                <a href="https://www.linkedin.com/in/artem-zhuravlov-713547259/" target="_blank"
+                   rel="noopener noreferrer"
+                   className="inline-flex items-center justify-start space-x-2 text-[#0A66C2] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold">
                   <FaLinkedin className="text-2xl" />
-                  <span>LinkedIn</span>
+                  <span>{t('linkedin')}</span>
                 </a>
               </li>
               <li>
-                <a href="https://t.me/Artem_Smailik" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-start space-x-2 text-[#0088cc] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold">
+                <a href="https://t.me/Artem_Smailik" target="_blank" rel="noopener noreferrer"
+                   className="inline-flex items-center justify-start space-x-2 text-[#0088cc] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold">
                   <FaTelegram className="text-2xl" />
-                  <span>Telegram</span>
+                  <span>{t('telegram')}</span>
                 </a>
               </li>
             </ul>
@@ -147,7 +155,7 @@ const ContactSections: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Ваше имя"
+                  placeholder={t('namePlaceholder')}
                   className="w-full px-4 py-2 bg-black bg-opacity-70 text-white rounded-md border border-green-500 focus:outline-none focus:ring focus:ring-green-500"
                 />
                 {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
@@ -158,7 +166,7 @@ const ContactSections: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Ваш email"
+                  placeholder={t('emailPlaceholder')}
                   className="w-full px-4 py-2 bg-black bg-opacity-70 text-white rounded-md border border-green-500 focus:outline-none focus:ring focus:ring-green-500"
                 />
                 {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
@@ -168,7 +176,7 @@ const ContactSections: React.FC = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Ваше сообщение"
+                  placeholder={t('messagePlaceholder')}
                   className="w-full px-4 py-2 bg-black bg-opacity-70 text-white rounded-md border border-green-500 focus:outline-none focus:ring focus:ring-green-500 h-32"
                 ></textarea>
                 {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
@@ -178,7 +186,7 @@ const ContactSections: React.FC = () => {
                 disabled={isSubmitting}
                 className="w-full px-4 py-2 bg-green-500 text-black font-bold rounded-md hover:bg-green-600 transition"
               >
-                {isSubmitting ? 'Отправка...' : 'Отправить'}
+                {isSubmitting ? t('sending') : t('send')}
               </button>
             </form>
           </div>

@@ -7,8 +7,15 @@ import { routing } from '@/i18n/routing';
 
 import "../../styles/globals.css";
 
+
+interface PageMetadata extends Metadata {
+  title: string;
+  description: string;
+}
+
+
 // Метаданные для страницы
-export const metadata: Metadata = {
+export const metadata: PageMetadata  = {
   title: "Artem Zhuravlov - Full-Stack Developer",
   description: "Experienced Full-Stack Developer specializing in modern web technologies. Creating seamless user experiences and robust back-end solutions. Explore my projects and expertise!",
 };
@@ -31,7 +38,16 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+    <head>
+      <title>{metadata.title}</title>
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/faviconn-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    </head>
     <body>
+
     <NextIntlClientProvider messages={messages}>
       {children}
     </NextIntlClientProvider>

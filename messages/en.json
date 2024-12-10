@@ -1,7 +1,7 @@
 {
   "Header": {
     "home": "Home",
-    "about": "About",
+    "about": "About me",
     "projects": "Projects",
     "contact": "Contact"
   },
@@ -19,8 +19,126 @@
   "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, de {Русский} en {English} other {Русский}}"
+},
+  "Logo": {
+    "phrase_1": "Excellent development for you!",
+    "phrase_2": "Technologies for the future!",
+    "phrase_3": "Innovation in every detail!",
+    "phrase_4": "Transforming your ideas into reality!",
+    "phrase_5": "Creating projects with soul!",
+    "phrase_6": "Your success begins with us!",
+    "phrase_7": "Making the world more convenient step by step!"
+  },
+  "AboutSection": {
+    "title": "About me",
+    "description": "I create modern web applications with responsive design and a focus on clean, maintainable code. My technologies include HTML, CSS, JavaScript, React, Node.js, and more. My goal is to help clients achieve their objectives through effective and quality solutions.",
+    "points": {
+      "simplicity": {
+        "title": "Simplicity and Convenience",
+        "description": "I develop interfaces that are intuitive and responsive.",
+        "backText": "Simplicity and UX are key to success."
+      },
+      "cleanCode": {
+        "title": "Clean Code",
+        "description": "I always strive to write easily readable and maintainable code.",
+        "backText": "Clean code simplifies maintenance."
+      },
+      "learnability": {
+        "title": "Learnability",
+        "description": "I study new technologies to stay on the cutting edge.",
+        "backText": "React, TypeScript, and much more."
+      },
+      "teamwork": {
+        "title": "Teamwork",
+        "description": "I value knowledge sharing and know how to work with other developers.",
+        "backText": "Collaboration creates masterpieces."
+      }
+    }
+  },
+  "ContactSections": {
 
+  "header": "Contact Me",
+  "subheader": "I'm always ready to help",
+  "instagram": "Instagram",
+  "tiktok": "TikTok",
+  "linkedin": "LinkedIn",
+  "telegram": "Telegram",
+  "namePlaceholder": "Your name",
+  "emailPlaceholder": "Your email",
+  "messagePlaceholder": "Your message",
+  "errors": {
+    "name": "Please enter your name",
+    "email": "Please enter a valid email",
+    "message": "Please enter a message"
+  },
+  "successMessage": "Message sent successfully!",
+  "errorMessage": "An error occurred while sending",
+  "serverError": "Server error",
+  "sending": "Sending...",
+  "send": "Send"
+},
+  "ProjectSection": {
+
+
+    "webstudio": {
+      "title": "WebStudio",
+      "description": "This project aims to create a professional and functional website..."
+    },
+    "dailyPhoto": {
+      "title": "Daily Photo",
+      "description": "This project is a unique educational platform for photography enthusiasts..."
+    },
+    "movieLibrary": {
+      "title": "Movie Library",
+      "description": "A collection of movies..."
+    },
+    "contactManagement": {
+      "title": "Contact Management Website",
+      "description": "A simple and convenient app to store, manage, and organize your contacts..."
+    },
+    "freshHarvest": {
+      "title": "Fresh Harvest",
+      "description": "A convenient service for delivering fresh organic vegetables..."
+    },
+    "travelTrucks": {
+      "title": "TravelTrucks",
+      "description": "In our catalog, you'll find everything you need for your trip..."
+    },
+    "teaOasis": {
+      "title": "Tea Oasis",
+      "description": "Welcome to Tea Oasis..."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "This project is a platform for developing and creating functional websites..."
+    },
+    "aquatrack": {
+      "title": "AQUATRACK",
+      "description": "The project idea is to create a convenient web application..."
+    },
+    "projects": {
+      "title": "My Projects",
+      "liveVersion": "Live Version",
+      "repository": "Repository"
+    }
+  },
+  "Footer": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "policies": {
+      "terms": "Terms of Use",
+      "privacy": "Privacy Policy"
+    },
+    "copyright": " Artem Project {year}"
+  }
 }
-}
+
+
+
+
 
 

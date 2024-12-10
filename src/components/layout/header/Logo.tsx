@@ -1,15 +1,20 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Typewriter, { TypewriterClass } from 'typewriter-effect';
+import { useTranslations } from 'next-intl';
+
 
 const Logo: React.FC = () => {
+  const t = useTranslations('Logo');
+
+
   const phrases = [
-    'Прекрасная разработка для вас!',
-    'Технологии для будущего!',
-    'Инновации в каждую деталь!',
-    'Преобразуем ваши идеи в реальность!',
-    'Создаём проекты с душой!',
-    'Ваш успех начинается с нас!',
-    'Делаем мир удобнее с каждым шагом!',
+    t('phrase_1'),
+    t('phrase_2'),
+    t('phrase_3'),
+    t('phrase_4'),
+    t('phrase_5'),
+    t('phrase_6'),
+    t('phrase_7'),
   ];
 
   const colors = [

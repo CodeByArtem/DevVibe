@@ -6,6 +6,7 @@ import { FaGithub, FaLink } from 'react-icons/fa';
 import Image from 'next/image';
 import { Navigation, Pagination, Scrollbar, Keyboard } from 'swiper/modules';
 import { SwiperRef } from 'swiper/react';
+import { useTranslations } from 'next-intl';
 
 interface Project {
   title: string;
@@ -17,73 +18,93 @@ interface Project {
 
 const ProjectSection: React.FC = () => {
   const swiperRef = useRef<SwiperRef | null>(null);
-
+  const t = useTranslations('ProjectSection');
   const projects: Project[] = [
     {
-      title: 'WebStudio',
+      title: t('webstudio.title'),
       image: '/images/project/webstudio.webp',
-      description: 'Этот проект направлен на создание профессионального и функционального веб-сайта для вашей компании, который поможет увеличить ваш онлайн-присутствие и улучшить взаимодействие с клиентами.',
+      description: t('webstudio.description'),
       liveLink: 'https://codebyartem.github.io/goit-markup-hw-06/index.html',
       repoLink: 'https://github.com/CodeByArtem/goit-markup-hw-06',
     },
     {
-      title: 'Daily photo',
+      title: t('dailyPhoto.title'),
       image: '/images/project/photography.png',
-      description: 'Этот проект представляет собой уникальную образовательную платформу для любителей фотографии. Мы предлагаем удобный интерфейс, современные инструменты и курсы, которые помогут раскрыть ваш творческий потенциал и освоить искусство фотографии на профессиональном уровне.',
+      description: t('dailyPhoto.description'),
       liveLink: 'https://ihordid.github.io/FullSpectrum/',
       repoLink: 'https://github.com/CodeByArtem/Full',
     },
     {
-      title: 'Movie Library',
+      title: t('movieLibrary.title'),
       image: '/images/project/venom.png',
-      description: 'Библиотека с фильмами — это коллекция фильмов, позволяющая легко находить, просматривать и сохранять любимые произведения. Удобная навигация и фильтры делают поиск нужного фильма быстрым и простым.',
+      description: t('movieLibrary.description'),
       liveLink: 'https://goit-react-hw-05-opal-one.vercel.app/',
       repoLink: 'https://github.com/CodeByArtem/goit-react-hw-05',
     },
     {
-      title: 'Contact Management Website',
+      title: t('contactManagement.title'),
       image: '/images/project/phone.png',
-      description: 'Простое и удобное приложение для хранения, управления и организации ваших контактов. Идеально подходит для тех, кто ценит порядок и доступность информации в любое время.',
+      description: t('contactManagement.description'),
       liveLink: 'https://goit-react-hw-08-six-black.vercel.app/',
       repoLink: 'https://github.com/CodeByArtem/goit-react-hw-08',
     },
     {
-      title: 'Fresh Harvest',
+      title: t('freshHarvest.title'),
       image: '/images/project/fresh.png',
-      description: 'удобный сервис доставки свежих органических овощей прямо к вашему порогу. Наслаждайтесь качественными и полезными продуктами каждый день',
+      description: t('freshHarvest.description'),
       liveLink: 'https://codebyartem.github.io/FullSpectrum/',
       repoLink: 'https://github.com/CodeByArtem/FullSpectrum',
     },
     {
-      title: 'TravelTrucks',
+      title: t('travelTrucks.title'),
       image: '/images/project/travel.png',
-      description: 'В нашем каталоге вы найдете все, что нужно для вашего путешествия — от удобства до функциональности. ',
+      description: t('travelTrucks.description'),
       liveLink: 'https://urban-drive-ijfb.vercel.app/',
       repoLink: 'https://github.com/CodeByArtem/UrbanDrive',
     },
     {
-      title: 'Tea Oasis',
+      title: t('teaOasis.title'),
       image: '/images/project/lipton.png',
-      description: 'Ласкаво просимо до Чайної Оази - вашого місця для відкриття світу справжнього чаю! ',
+      description: t('teaOasis.description'),
       liveLink: 'https://codebyartem.github.io/wonderful-friends/',
       repoLink: 'https://github.com/CodeByArtem/wonderful-friends',
     },
     {
-      title: 'Portfolio',
+      title: t('portfolio.title'),
       image: '/images/project/portfolio.png',
-      description: 'Проект представляет собой платформу для разработки и создания функциональных веб-сайтов, ' +
-        'обеспечивающих высокую производительность и уникальный пользовательский опыт. ',
+      description: t('portfolio.description'),
       liveLink: 'https://ihordid.github.io/return-js/index.html',
       repoLink: 'https://github.com/IhorDid/return-js',
     },
     {
-      title: 'AQUATRACK',
+      title: t('travelTrucks.title'),
+      image: '/images/project/travel.png',
+      description: t('travelTrucks.description'),
+      liveLink: 'https://urban-drive-ijfb.vercel.app/',
+      repoLink: 'https://github.com/CodeByArtem/UrbanDrive',
+    },
+    {
+      title: t('teaOasis.title'),
+      image: '/images/project/lipton.png',
+      description: t('teaOasis.description'),
+      liveLink: 'https://codebyartem.github.io/wonderful-friends/',
+      repoLink: 'https://github.com/CodeByArtem/wonderful-friends',
+    },
+    {
+      title: t('portfolio.title'),
+      image: '/images/project/portfolio.png',
+      description: t('portfolio.description'),
+      liveLink: 'https://ihordid.github.io/return-js/index.html',
+      repoLink: 'https://github.com/IhorDid/return-js',
+    },
+    {
+      title: t('aquatrack.title'),
       image: '/images/project/vodatreck.png',
-      description: ' Идея проекта заключается в создании удобного веб-приложения, предназначенного для того, ' +
-        'чтобы помочь пользователям отслеживать ежедневное потребление воды.',
+      description: t('aquatrack.description'),
       liveLink: 'https://final-project-frontend-weld.vercel.app',
       repoLink: 'https://github.com/Kamila-Lohvynenko/final-project-frontend',
     },
+
   ];
 
   return (
@@ -99,7 +120,7 @@ const ProjectSection: React.FC = () => {
             textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00',
           }}
         >
-          Мои Проекты
+          {t('projects.title')}
         </h2>
 
         <div className="relative">
@@ -149,7 +170,7 @@ const ProjectSection: React.FC = () => {
                         className="text-blue-100 hover:text-red-600 transition-all duration-300 text-sm sm:text-lg font-medium border-2 border-black hover:border-red-600 px-2 py-1 rounded-md backdrop-blur-md bg-opacity-30 bg-black"
                       >
                         <FaLink className="inline-block mr-2" />
-                        Живая версия
+                        {t('projects.liveVersion')}
                       </a>
                       <a
                         href={project.repoLink}
@@ -158,7 +179,7 @@ const ProjectSection: React.FC = () => {
                         className="text-blue-100 hover:text-red-600 transition-all duration-300 text-sm sm:text-lg font-medium border-2 border-black hover:border-red-600 px-2 py-1 rounded-md backdrop-blur-md bg-opacity-30 bg-black"
                       >
                         <FaGithub className="inline-block mr-2" />
-                        Репозиторий
+                        {t('projects.repository')}
                       </a>
                     </div>
 

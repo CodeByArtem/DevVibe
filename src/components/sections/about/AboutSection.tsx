@@ -1,46 +1,48 @@
 'use client';
 import React, { useState } from 'react';
 import { FaLaptopCode, FaCode, FaCogs, FaUsers } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
 
 const AboutSection: React.FC = () => {
+  const t = useTranslations('AboutSection');
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
   const points = [
     {
-      title: 'Простота и удобство',
-      description: 'Разрабатываю интерфейсы, которые интуитивно понятны и адаптивны.',
+      title: t('title'),
+      description: t('points.simplicity.description'),
       icon: <FaLaptopCode className="text-purple-700 text-5xl mb-3 drop-shadow-lg" />,
-      backText: 'Простота и UX — ключ к успеху.',
+      backText: t('points.simplicity.backText'),
       backgroundColor: 'bg-gradient-to-r from-blue-500 to-indigo-600',
       textColor: 'text-white',
       headerColor: 'text-yellow-500',
       descriptionColor: 'text-yellow-400',
     },
     {
-      title: 'Чистый код',
-      description: 'Всегда стремлюсь писать легко читаемый и поддерживаемый код.',
+      title: t('points.cleanCode.title'),
+      description: t('points.cleanCode.description'),
       icon: <FaCode className="text-blue-500 text-5xl mb-3 drop-shadow-lg" />,
-      backText: 'Чистый код облегчает поддержку.',
+      backText: t('points.cleanCode.backText'),
       backgroundColor: 'bg-gradient-to-r from-yellow-500 to-orange-500',
       textColor: 'text-white',
       headerColor: 'text-red-500',
       descriptionColor: 'text-blue-900',
     },
     {
-      title: 'Обучаемость',
-      description: 'Изучаю новые технологии, чтобы оставаться на передовой.',
+      title: t('points.learnability.title'),
+      description: t('points.learnability.description'),
       icon: <FaCogs className="text-green-500 text-5xl mb-3 drop-shadow-lg" />,
-      backText: 'React, TypeScript и многое другое.',
+      backText: t('points.learnability.backText'),
       backgroundColor: 'bg-gradient-to-r from-purple-500 to-pink-500',
       textColor: 'text-white',
       headerColor: 'text-green-500',
       descriptionColor: 'text-black',
     },
     {
-      title: 'Командная работа',
-      description: 'Ценю обмен опытом и знаю, как работать с другими разработчиками.',
+      title: t('points.teamwork.title'),
+      description: t('points.teamwork.description'),
       icon: <FaUsers className="text-yellow-500 text-5xl mb-3 drop-shadow-lg" />,
-      backText: 'Сотрудничество создает шедевры.',
+      backText: t('points.teamwork.backText'),
       backgroundColor: 'bg-gradient-to-r from-green-500 to-teal-500',
       textColor: 'text-white',
       headerColor: 'text-blue-500',
@@ -56,7 +58,7 @@ const AboutSection: React.FC = () => {
         backgroundImage: 'url(/images/matrix.webp)',  // Фоновое изображение
         backgroundSize: 'cover', // Изображение будет покрывать всю секцию
         backgroundPosition: 'top center', // Картинка будет зафиксирована сверху и по центру по горизонтали
-        backgroundAttachment: 'fixed', // Картинка будет фиксирована, не будет скроллиться
+        backgroundAttachment: 'fixed', // Картинка будет фиксирована, не будет скроллится
       }}
     >
       <div className="relative z-10 max-w-5xl mx-auto text-center">
@@ -66,7 +68,7 @@ const AboutSection: React.FC = () => {
             textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00',
           }}
         >
-          Обо мне
+          {t('title')}
         </h2>
         <p
           className="text-xl md:text-lg mb-10 font-bold text-black"
@@ -75,10 +77,7 @@ const AboutSection: React.FC = () => {
               '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00',
           }}
         >
-          Я создаю современные веб-приложения с адаптивным дизайном и фокусом на чистый, поддерживаемый код. Мои
-          технологии
-          включают HTML, CSS, JavaScript, React, Node.js и другие. Моя цель — помочь клиентам достичь их целей с помощью
-          эффективных и качественных решений.
+          {t('description')}
         </p>
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {points.map((point, index) => (

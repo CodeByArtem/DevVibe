@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -10,6 +14,7 @@
 
 body {
     background-color: #fafafa;
+    font-family: 'GeistVF', sans-serif;
 }
 
 .transform-style-3d {
