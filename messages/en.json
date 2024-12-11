@@ -18,7 +18,8 @@
   },
   "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, de {Русский} en {English} other {Русский}}"
+    "locale": "{locale, select, ru {Russian} en {English} pl {Polish} ua {Ukrainian} other {English}}"
+
 },
   "Logo": {
     "phrase_1": "Excellent development for you!",

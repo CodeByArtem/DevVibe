@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
     let columns: Column[] = []; // Типизация массива columns
     let columnsCount = 0;
     AOS.init({
-      duration: 3000, // Время анимации
+      duration: 2000, // Время анимации
       once: true,     // Анимация срабатывает только один раз
     });
 

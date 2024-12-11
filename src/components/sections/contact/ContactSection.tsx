@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useEffect, useState } from 'react';
 import { FaInstagram, FaTiktok, FaLinkedin, FaTelegram } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';  // Импортируем ToastContainer
@@ -8,32 +8,31 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
-
 const ContactSections: React.FC = () => {
   const t = useTranslations('ContactSections');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value
+      [name]: value,
     }));
   };
   useEffect(() => {
     // Инициализируем AOS
     AOS.init({
-      duration: 3000, // Время анимации
+      duration: 1000, // Время анимации
       once: true,     // Анимация срабатывает только один раз
     });
   }, []);
@@ -106,7 +105,8 @@ const ContactSections: React.FC = () => {
 
   return (
     <>
-      <section id="contact" className="relative min-h-screen bg-black flex flex-col items-center justify-center overflow-hidden">
+      <section id="contact"
+               className="relative min-h-screen bg-black flex flex-col items-center justify-center overflow-hidden">
         <div
           style={{
             backgroundImage: 'url(\'/images/matrixconact.webp\')',
@@ -118,23 +118,25 @@ const ContactSections: React.FC = () => {
           className="absolute inset-0"
         ></div>
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 py-12" style={{ textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00' }}>
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 py-12"
+             style={{ textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00' }}>
           <div data-aos="fade-down" className="text-center mb-8">
             <h2 className="text-4xl md:text-3xl font-extrabold mb-8 text-white drop-shadow-md">{t('header')}</h2>
-            <p className="text-lg md:text-xl mb-4 text-black font-bold" style={{ textShadow: '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00' }}>
+            <p className="text-lg md:text-xl mb-4 text-black font-bold"
+               style={{ textShadow: '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00' }}>
               {t('subheader')}
             </p>
           </div>
 
           <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0">
-            <ul  className="text-center md:text-left md:w-1/3 space-y-4 mb-8 md:mb-0">
-              <li data-aos="fade-right" >
+            <ul className="text-center md:text-left md:w-1/3 space-y-4 mb-8 md:mb-0">
+              <li data-aos="fade-right">
                 <a href="https://www.instagram.com/angelic._.heart" target="_blank" rel="noopener noreferrer"
                    className="inline-flex items-center justify-start space-x-2 text-[#E4405F] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold">
                   <FaInstagram className="text-2xl" />
                   <span>{t('instagram')}</span>
                 </a>
-              </li >
+              </li>
               <li data-aos="fade-right" data-aos-delay="500">
                 <a href="https://www.tiktok.com/@angelic_heart?_t=8rwOvjqoDJQ&_r=1" target="_blank"
                    rel="noopener noreferrer"
@@ -208,7 +210,8 @@ const ContactSections: React.FC = () => {
       </section>
 
       {/* Добавляем ToastContainer в компонент */}
-      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop closeOnClick rtl={false}
+                      pauseOnFocusLoss draggable pauseOnHover />
     </>
   );
 };

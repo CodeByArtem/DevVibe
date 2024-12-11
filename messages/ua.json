@@ -1,0 +1,136 @@
+{
+  "Header": {
+    "home": "Головна",
+    "about": "Про мене",
+    "projects": "Проекти",
+    "contact": "Контакти"
+  },
+  "HeroSection": {
+    "greeting": "Привіт, я Артем, Full-Stack Розробник",
+    "description": "Веб-розробка з акцентом на якість, продуктивність та зручність для клієнта.",
+    "html": "HTML",
+    "css": "CSS",
+    "node": "Node.js",
+    "js": "JavaScript",
+    "git": "Git",
+    "next": "Next.js",
+    "react": "React"
+  },
+  "LocaleSwitcher": {
+    "label": "Змінити мову",
+    "locale": "{locale, select, ru {Русский} en {English} pl {Polski} ua {Українська} other {English}}"
+
+  },
+  "Logo": {
+    "phrase_1": "Чудова розробка для вас!",
+    "phrase_2": "Технології для майбутнього!",
+    "phrase_3": "Інновації в кожну деталь!",
+    "phrase_4": "Перетворюємо ваші ідеї в реальність!",
+    "phrase_5": "Створюємо проекти з душею!",
+    "phrase_6": "Ваш успіх починається з нас!",
+    "phrase_7": "Робимо світ зручнішим з кожним кроком!"
+  },
+  "AboutSection": {
+    "title": "Про мене",
+    "description": "Я створюю сучасні веб-додатки з адаптивним дизайном та фокусом на чистий, підтримуваний код. Мої технології включають HTML, CSS, JavaScript, React, Node.js та інші. Моя мета — допомогти клієнтам досягти їх цілей за допомогою ефективних і якісних рішень.",
+    "points": {
+      "simplicity": {
+        "title": "Простота та зручність",
+        "description": "Розробляю інтерфейси, які інтуїтивно зрозумілі та адаптивні.",
+        "backText": "Простота і UX — ключ до успіху."
+      },
+      "cleanCode": {
+        "title": "Чистий код",
+        "description": "Завжди прагну писати легко читабельний і підтримуваний код.",
+        "backText": "Чистий код полегшує підтримку."
+      },
+      "learnability": {
+        "title": "Навчання",
+        "description": "Вивчаю нові технології, щоб залишатися на передовій.",
+        "backText": "React, TypeScript і багато іншого."
+      },
+      "teamwork": {
+        "title": "Командна робота",
+        "description": "Ціную обмін досвідом і знаю, як працювати з іншими розробниками.",
+        "backText": "Співпраця створює шедеври."
+      }
+    }
+  },
+  "ContactSections": {
+    "header": "Зв'яжіться зі мною",
+    "subheader": "Я завжди готовий допомогти",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "linkedin": "LinkedIn",
+    "telegram": "Telegram",
+    "namePlaceholder": "Ваше ім'я",
+    "emailPlaceholder": "Ваш email",
+    "messagePlaceholder": "Ваше повідомлення",
+    "errors": {
+      "name": "Будь ласка, введіть ваше ім'я",
+      "email": "Будь ласка, введіть правильний email",
+      "message": "Будь ласка, введіть повідомлення"
+    },
+    "successMessage": "Повідомлення успішно надіслано!",
+    "errorMessage": "Сталася помилка при відправці",
+    "serverError": "Помилка сервера",
+    "sending": "Відправка...",
+    "send": "Надіслати"
+  },
+  "ProjectSection": {
+    "webstudio": {
+      "title": "WebStudio",
+      "description": "Цей проект спрямований на створення професійного та функціонального веб-сайту..."
+    },
+    "dailyPhoto": {
+      "title": "Daily Photo",
+      "description": "Цей проект є унікальною освітньою платформою для любителів фотографії..."
+    },
+    "movieLibrary": {
+      "title": "Movie Library",
+      "description": "Бібліотека з фільмами — це колекція фільмів..."
+    },
+    "contactManagement": {
+      "title": "Контактний менеджер",
+      "description": "Простий і зручний додаток для зберігання, управління та організації ваших контактів..."
+    },
+    "freshHarvest": {
+      "title": "Fresh Harvest",
+      "description": "Зручний сервіс доставки свіжих органічних овочів..."
+    },
+    "travelTrucks": {
+      "title": "TravelTrucks",
+      "description": "У нашому каталозі ви знайдете все, що потрібно для вашої подорожі..."
+    },
+    "teaOasis": {
+      "title": "Tea Oasis",
+      "description": "Ласкаво просимо в Чайну Оазу..."
+    },
+    "portfolio": {
+      "title": "Портфоліо",
+      "description": "Проект є платформою для розробки та створення функціональних веб-сайтів..."
+    },
+    "aquatrack": {
+      "title": "AQUATRACK",
+      "description": "Ідея проекту полягає в створенні зручного веб-додатку..."
+    },
+    "projects": {
+      "title": "Мої Проекти",
+      "liveVersion": "Жива версія",
+      "repository": "Репозиторій"
+    }
+  },
+  "Footer": {
+    "nav": {
+      "home": "Головна",
+      "about": "Про нас",
+      "projects": "Проекти",
+      "contact": "Контакти"
+    },
+    "policies": {
+      "terms": "Умови використання",
+      "privacy": "Політика конфіденційності"
+    },
+    "copyright": " Проект Артема {year}"
+  }
+}

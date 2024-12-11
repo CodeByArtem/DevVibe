@@ -1,0 +1,137 @@
+{
+  "Header": {
+    "home": "Strona główna",
+    "about": "O mnie",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "HeroSection": {
+    "greeting": "Cześć, jestem Artem, Full-Stack Developer",
+    "description": "Tworzę aplikacje internetowe z naciskiem na jakość, wydajność i wygodę użytkownika.",
+    "html": "HTML",
+    "css": "CSS",
+    "node": "Node.js",
+    "js": "JavaScript",
+    "git": "Git",
+    "next": "Next.js",
+    "react": "React"
+  },
+  "LocaleSwitcher": {
+    "label": "Zmień język",
+    "locale": "{locale, select, ru {Rosyjski}  en {Angielski} pl {Polski} ua {Ukraiński} other {Polski}}"
+
+
+  },
+  "Logo": {
+    "phrase_1": "Doskonały rozwój dla Ciebie!",
+    "phrase_2": "Technologie na przyszłość!",
+    "phrase_3": "Innowacje w każdym detalu!",
+    "phrase_4": "Przekształcamy Twoje pomysły w rzeczywistość!",
+    "phrase_5": "Tworzymy projekty z pasją!",
+    "phrase_6": "Twój sukces zaczyna się u nas!",
+    "phrase_7": "Sprawiamy, że świat staje się wygodniejszy z każdym krokiem!"
+  },
+  "AboutSection": {
+    "title": "O mnie",
+    "description": "Tworzę nowoczesne aplikacje internetowe z responsywnym designem i skupieniem na czystym, łatwym do utrzymania kodzie. Technologie, z których korzystam to HTML, CSS, JavaScript, React, Node.js i inne. Moją misją jest pomaganie klientom w osiąganiu ich celów za pomocą efektywnych i jakościowych rozwiązań.",
+    "points": {
+      "simplicity": {
+        "title": "Prostota i wygoda",
+        "description": "Projektuję interfejsy, które są intuicyjne i responsywne.",
+        "backText": "Prostota i UX to klucz do sukcesu."
+      },
+      "cleanCode": {
+        "title": "Czysty kod",
+        "description": "Zawsze dążę do pisania kodu, który jest łatwy do przeczytania i utrzymania.",
+        "backText": "Czysty kod ułatwia utrzymanie."
+      },
+      "learnability": {
+        "title": "Uczenie się",
+        "description": "Uczę się nowych technologii, aby pozostać na czołowej linii.",
+        "backText": "React, TypeScript i wiele innych."
+      },
+      "teamwork": {
+        "title": "Praca zespołowa",
+        "description": "Cenię wymianę doświadczeń i wiem, jak współpracować z innymi programistami.",
+        "backText": "Współpraca tworzy arcydzieła."
+      }
+    }
+  },
+  "ContactSections": {
+    "header": "Skontaktuj się ze mną",
+    "subheader": "Zawsze gotów, aby pomóc",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "linkedin": "LinkedIn",
+    "telegram": "Telegram",
+    "namePlaceholder": "Twoje imię",
+    "emailPlaceholder": "Twój email",
+    "messagePlaceholder": "Twoja wiadomość",
+    "errors": {
+      "name": "Proszę wprowadzić swoje imię",
+      "email": "Proszę wprowadzić poprawny email",
+      "message": "Proszę wprowadzić wiadomość"
+    },
+    "successMessage": "Wiadomość została pomyślnie wysłana!",
+    "errorMessage": "Wystąpił błąd podczas wysyłania",
+    "serverError": "Błąd serwera",
+    "sending": "Wysyłanie...",
+    "send": "Wyślij"
+  },
+  "ProjectSection": {
+    "webstudio": {
+      "title": "WebStudio",
+      "description": "Projekt ten skupia się na tworzeniu profesjonalnej i funkcjonalnej strony internetowej..."
+    },
+    "dailyPhoto": {
+      "title": "Daily Photo",
+      "description": "Projekt ten jest unikalną platformą edukacyjną dla miłośników fotografii..."
+    },
+    "movieLibrary": {
+      "title": "Biblioteka Filmów",
+      "description": "Biblioteka filmów to kolekcja filmów..."
+    },
+    "contactManagement": {
+      "title": "Zarządzanie kontaktami",
+      "description": "Prosta i wygodna aplikacja do przechowywania, zarządzania i organizowania Twoich kontaktów..."
+    },
+    "freshHarvest": {
+      "title": "Fresh Harvest",
+      "description": "Wygodna usługa dostawy świeżych organicznych warzyw..."
+    },
+    "travelTrucks": {
+      "title": "TravelTrucks",
+      "description": "W naszym katalogu znajdziesz wszystko, czego potrzebujesz na swoją podróż..."
+    },
+    "teaOasis": {
+      "title": "Tea Oasis",
+      "description": "Witamy w Tea Oasis..."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Projekt jest platformą do tworzenia funkcjonalnych stron internetowych..."
+    },
+    "aquatrack": {
+      "title": "AQUATRACK",
+      "description": "Pomysł projektu polega na stworzeniu wygodnej aplikacji internetowej..."
+    },
+    "projects": {
+      "title": "Moje Projekty",
+      "liveVersion": "Wersja na żywo",
+      "repository": "Repozytorium"
+    }
+  },
+  "Footer": {
+    "nav": {
+      "home": "Strona główna",
+      "about": "O nas",
+      "projects": "Projekty",
+      "contact": "Kontakt"
+    },
+    "policies": {
+      "terms": "Warunki korzystania",
+      "privacy": "Polityka prywatności"
+    },
+    "copyright": " Projekt Artema {year}"
+  }
+}

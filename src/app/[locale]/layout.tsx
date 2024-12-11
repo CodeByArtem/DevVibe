@@ -42,15 +42,16 @@ export default async function RootLayout({
     <html lang={locale}>
     <head>
       <title>{metadata.title}</title>
+      <meta name="description" content={metadata.description} />
+      <meta name="keywords" content="full-stack developer, web development, Artem Zhuravlov" />
+
+      <meta property="og:title" content={metadata.title} />
+      <meta property="og:description" content={metadata.description} />
       <meta property="og:image" content="https://portfolio-amber-six-98.vercel.app/images/hotoroom.webp" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:url" content="https://portfolio-amber-six-98.vercel.app" />
-      <meta property="og:type" content="website" />
-      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/faviconn-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <meta property="og:image:type" content="image/webp" />
+      <meta property="og:image:alt" content="Image of Artem Zhuravlov's portfolio" />
 
     </head>
     <body>

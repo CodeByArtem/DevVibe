@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Artem Zhuravlov - Full-Stack Developer
 
-## Getting Started
+Привет! Я — **Full-Stack Developer** с опытом работы в создании высококачественных веб-приложений с использованием современных технологий. Мои проекты отражают моё внимание к деталям и стремление к совершенству в каждой строке кода.
 
-First, run the development server:
+## О себе
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Я увлечен веб-разработкой и стремлюсь создавать надежные и масштабируемые решения для пользователей. Сильные стороны:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Глубокие знания в **Frontend** (HTML, CSS, JavaScript, React) и **Backend** (Node.js, Express, MongoDB).
+- Опыт работы с **системами контроля версий** (Git) и **CI/CD**.
+- Понимание принципов **адаптивного дизайна** и **UX/UI**.
+- Умение разрабатывать **интерактивные веб-приложения**, которые обеспечивают отличное пользовательское взаимодействие.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Навыки
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend
 
-## Learn More
+- **HTML5**, **CSS3**, **JavaScript** (ES6+)
+- **React**, **Redux**
+- **Next.js**, **Webpack**, **Babel**
+- Адаптивный и отзывчивый дизайн
+- Протоколы и стандарты веб-разработки (REST, GraphQL)
 
-To learn more about Next.js, take a look at the following resources:
+### Backend
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Node.js**, **Express**
+- **MongoDB**, **MySQL**
+- **JWT** для аутентификации
+- Разработка RESTful API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Дополнительно
 
-## Deploy on Vercel
+- **Docker** и **Kubernetes**
+- **CI/CD** (Jenkins, GitHub Actions)
+- Тестирование с **Jest** и **React Testing Library**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Контакты
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+- **LinkedIn**: [linkedin.com/in/artem-zhuravlov-713547259](https://www.linkedin.com/in/artem-zhuravlov-713547259/)
+- **GitHub**: [github.com/CodeByArtem](https://github.com/CodeByArtem)
+
+## Моё видение
+
+Я стремлюсь быть не просто разработчиком, а тем, кто решает реальные задачи с помощью технологий. Каждое приложение, которое я разрабатываю, должно быть не только функциональным, но и удобным для пользователей, с высококачественным интерфейсом и отличной производительностью.
+
+---
+
+**Спасибо за визит!** Если у вас есть вопросы или предложения, не стесняйтесь обращаться.
