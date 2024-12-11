@@ -37,7 +37,7 @@ export default async function RootLayout({
 
   // Загрузка сообщений для выбранной локали
   const messages = await getMessages();
-
+  const currentUrl = `https://portfolio-amber-six-98.vercel.app/${locale}`;
   return (
     <html lang={locale}>
     <head>
@@ -45,6 +45,7 @@ export default async function RootLayout({
       <meta name="description" content={metadata.description} />
       <meta name="keywords" content="full-stack developer, web development, Artem Zhuravlov" />
 
+      {/* Open Graph метатеги */}
       <meta property="og:title" content={metadata.title} />
       <meta property="og:description" content={metadata.description} />
       <meta property="og:image" content="https://portfolio-amber-six-98.vercel.app/images/hotoroom.webp" />
@@ -52,6 +53,9 @@ export default async function RootLayout({
       <meta property="og:image:height" content="630" />
       <meta property="og:image:type" content="image/webp" />
       <meta property="og:image:alt" content="Image of Artem Zhuravlov's portfolio" />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:locale" content={`${locale}_${locale.toUpperCase()}`} />
+      <link rel="canonical" href={`https://portfolio-amber-six-98.vercel.app/`} />
 
     </head>
     <body>

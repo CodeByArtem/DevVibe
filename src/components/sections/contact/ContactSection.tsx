@@ -162,7 +162,7 @@ const ContactSections: React.FC = () => {
               </li>
             </ul>
 
-            <form data-aos="fade-left" data-aos-delay="500" onSubmit={handleSubmit} className="space-y-4 md:w-1/3">
+            <form data-aos="fade-left" data-aos-delay="300" onSubmit={handleSubmit} className="space-y-4 md:w-1/3">
               <div className="space-y-2">
                 <input
                   type="text"
