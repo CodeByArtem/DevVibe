@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f87ce8e1-69b5-450d-8518-2bdfaa5aac49" name="Changes" comment="" />
+    <list default="true" id="f87ce8e1-69b5-450d-8518-2bdfaa5aac49" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/hero/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/hero/HeroSection.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,11 +46,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\repositiry\DevVibe\public\images" />
       <recent name="D:\repositiry\DevVibe\public\fonts" />
       <recent name="D:\repositiry\DevVibe\public" />
       <recent name="D:\repositiry\DevVibe" />
       <recent name="D:\repositiry\DevVibe\fonts" />
-      <recent name="D:\repositiry\DevVibe\public\svg" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -97,7 +101,8 @@
       <workItem from="1733761908972" duration="21720000" />
       <workItem from="1733787251863" duration="11417000" />
       <workItem from="1733850830303" duration="18461000" />
-      <workItem from="1733879263175" duration="714000" />
+      <workItem from="1733879263175" duration="3325000" />
+      <workItem from="1733944062476" duration="1264000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <option name="createBranch" value="false" />

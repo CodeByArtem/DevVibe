@@ -118,21 +118,22 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section    id="header"
-               className="text-white flex flex-col md:flex-row items-center justify-center px-6 pb-10 relative"
-      style={{
-        backgroundImage: 'url(/images/aboutmatrix.webp)',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-        minHeight: '100vh', // Секция занимает весь экран
-      }}
+    <section id="header"
+             className="text-white flex flex-col md:flex-row items-center justify-center px-6 pb-10 relative"
+             style={{
+               backgroundImage: 'url(/images/aboutmatrix.webp)',
+               backgroundSize: 'cover',
+               backgroundRepeat: 'no-repeat',
+               backgroundPosition: 'center',
+               backgroundAttachment: 'fixed',
+               minHeight: '100vh', // Секция занимает весь экран
+             }}
     >
       {/* Canvas для матричной анимации */}
       <canvas id="matrix-canvas" className="absolute top-0 left-0 w-full h-full z-10" />
 
-      <div data-aos="fade-right" className=" w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center z-20 mt-5 md:mt-0">
+      <div data-aos="fade-right"
+           className=" w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center z-20 mt-5 md:mt-0">
         <Image
           className="rounded-xl object-contain object-center shadow-lg shadow-green-500/50 glow-effect"
           src="/images/hotoroom.webp"
@@ -172,17 +173,18 @@ const HeroSection: React.FC = () => {
 
         {/* Описание */}
         <p data-aos="fade-left" data-aos-delay="500"
-          className="text-lg md:text-xl mb-4  text-black font-bold"
-          style={{
-            textShadow:
-              '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00',
-          }}
+           className="text-lg md:text-xl mb-4  text-black font-bold"
+           style={{
+             textShadow:
+               '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00',
+           }}
         >
           {t('description')}
         </p>
 
         {/* Иконки с подписями */}
-        <ul data-aos="fade-left" data-aos-delay="500" className="flex justify-center gap-8 md:gap-10 flex-wrap mt-2 md:mt-4">
+        <ul data-aos="fade-left" data-aos-delay="500"
+            className="flex justify-center gap-6 md:gap-10 flex-wrap mt-2 md:mt-4">
           {icons.map(({ icon: Icon, color, name, label }) => (
             <li
               key={name}
