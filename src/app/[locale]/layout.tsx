@@ -42,7 +42,7 @@ export default async function RootLayout({
     <html lang={locale}>
     <head>
       <title>{metadata.title}</title>
-      <meta property="og:image" content="https://portfolio-amber-six-98.vercel.app/images/hotoroom.png" />
+      <meta property="og:image" content="https://portfolio-amber-six-98.vercel.app/images/hotoroom.webp" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:url" content="https://portfolio-amber-six-98.vercel.app" />

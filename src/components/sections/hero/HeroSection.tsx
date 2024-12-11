@@ -135,7 +135,7 @@ const HeroSection: React.FC = () => {
       <div data-aos="fade-right" className=" w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center z-20 mt-5 md:mt-0">
         <Image
           className="rounded-xl object-contain object-center shadow-lg shadow-green-500/50 glow-effect"
-          src="/images/hotoroom.png"
+          src="/images/hotoroom.webp"
           alt="Артем за компьютером"
           width={564}
           height={1280}
