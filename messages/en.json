@@ -18,7 +18,7 @@
   },
   "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, ru {Russian} en {English} pl {Polish} ua {Ukrainian} other {English}}"
+    "locale": "{locale, select, ru {Russian} en {English} pl {Polish} uk {Ukrainian} other {English}}"
 
 },
   "Logo": {
@@ -135,6 +135,12 @@
       "privacy": "Privacy Policy"
     },
     "copyright": " Artem Project {year}"
+  },
+  "MobileMenu": {
+    "home": "Home",
+    "about": "About me",
+    "projects": "Projects",
+    "contact": "Contact"
   }
 }
 

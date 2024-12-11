@@ -18,7 +18,7 @@
   },
   "LocaleSwitcher": {
     "label": "Zmień język",
-    "locale": "{locale, select, ru {Rosyjski}  en {Angielski} pl {Polski} ua {Ukraiński} other {Polski}}"
+    "locale": "{locale, select, ru {Rosyjski}  en {Angielski} pl {Polski} uk {Ukraiński} other {Polski}}"
 
 
   },
@@ -133,5 +133,11 @@
       "privacy": "Polityka prywatności"
     },
     "copyright": " Projekt Artema {year}"
+  },
+  "MobileMenu": {
+    "home": "Strona główna",
+    "about": "O mnie",
+    "projects": "Projekty",
+    "contact": "Kontakt"
   }
 }

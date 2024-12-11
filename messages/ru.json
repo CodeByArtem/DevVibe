@@ -18,7 +18,7 @@
     },
   "LocaleSwitcher": {
     "label": "Изменить язык",
-    "locale": "{locale, select, ru {Русский} en {English} pl {Polski} ua {Українська} other {Русский}}"
+    "locale": "{locale, select, ru {Русский} en {English} pl {Polski} uk {Українська} other {Русский}}"
 
   },
   "Logo": {
@@ -133,6 +133,12 @@
       "privacy": "Политика конфиденциальности"
     },
     "copyright": " Проект Артема {year}"
+  },
+  "MobileMenu": {
+    "home": "Главная",
+    "about": "О нас",
+    "projects": "Проекты",
+    "contact": "Контакты"
   }
 }
 

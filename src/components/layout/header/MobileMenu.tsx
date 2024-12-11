@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 interface MobileMenuProps {
   isMenuOpen: boolean;
@@ -7,6 +8,7 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen, toggleMenu }) => {
+  const  t  = useTranslations("MobileMenu"); // Инициализация хука перевода
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -102,7 +104,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen, toggleMenu }) => {
                 className="hover:text-green-400 focus:text-green-400 transition duration-300"
                 onClick={handleSmoothScroll} // Плавная прокрутка и закрытие меню
               >
-                Home
+                {t('home')}
               </Link>
             </li>
             <li>
@@ -111,7 +113,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen, toggleMenu }) => {
                 className="hover:text-green-400 focus:text-green-400 transition duration-300"
                 onClick={handleSmoothScroll} // Плавная прокрутка и закрытие меню
               >
-                About
+                {t('about')}
               </Link>
             </li>
             <li>
@@ -120,7 +122,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen, toggleMenu }) => {
                 className="hover:text-green-400 focus:text-green-400 transition duration-300"
                 onClick={handleSmoothScroll} // Плавная прокрутка и закрытие меню
               >
-                Projects
+                {t('projects')}
               </Link>
             </li>
             <li>
@@ -129,7 +131,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen, toggleMenu }) => {
                 className="hover:text-green-400 focus:text-green-400 transition duration-300"
                 onClick={handleSmoothScroll} // Плавная прокрутка и закрытие меню
               >
-                Contact
+                {t('contact')}
               </Link>
             </li>
           </ul>

@@ -3,10 +3,11 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Logo from './Logo'; // Импорт вашего компонента Logo
 import MobileMenu from './MobileMenu';
-import LocaleSwitcher from '@/components/ui/button/LocaleSwitcher'; // Импорт компонента для мобильного меню
- // Импорт компонента для переключателя языков
+import LocaleSwitcher from '@/components/ui/button/LocaleSwitcher'; // Импорт компонента для переключателя языков
+import { useTranslations } from 'next-intl';
 
 const Header: React.FC = () => {
+  const  t  = useTranslations("Header"); // Инициализация хука перевода
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastInteractionTime, setLastInteractionTime] = useState<number>(Date.now());
@@ -89,7 +90,7 @@ const Header: React.FC = () => {
       <nav className="max-w-7xl mx-auto flex justify-between items-center">
         <Link
           href="/"
-          aria-label="Home"
+          aria-label={t('home')}
           className="block md:pointer-events-auto pointer-events-none"
           onClick={handleLogoClick}
         >
@@ -100,23 +101,39 @@ const Header: React.FC = () => {
 
         <ul className="hidden md:flex space-x-8 text-lg font-medium ml-auto mr-4">
           <li>
-            <Link href="#header" className="hover:text-green-400 transition duration-300" onClick={(e) => handleAnchorClick(e, 'header')}>
-              Home
+            <Link
+              href="#header"
+              className="hover:text-green-400 transition duration-300"
+              onClick={(e) => handleAnchorClick(e, 'header')}
+            >
+              {t('home')}
             </Link>
           </li>
           <li>
-            <Link href="#about" className="hover:text-green-400 transition duration-300" onClick={(e) => handleAnchorClick(e, 'about')}>
-              About
+            <Link
+              href="#about"
+              className="hover:text-green-400 transition duration-300"
+              onClick={(e) => handleAnchorClick(e, 'about')}
+            >
+              {t('about')}
             </Link>
           </li>
           <li>
-            <Link href="#projects" className="hover:text-green-400 transition duration-300" onClick={(e) => handleAnchorClick(e, 'projects')}>
-              Projects
+            <Link
+              href="#projects"
+              className="hover:text-green-400 transition duration-300"
+              onClick={(e) => handleAnchorClick(e, 'projects')}
+            >
+              {t('projects')}
             </Link>
           </li>
           <li>
-            <Link href="#contact" className="hover:text-green-400 transition duration-300" onClick={(e) => handleAnchorClick(e, 'contact')}>
-              Contact
+            <Link
+              href="#contact"
+              className="hover:text-green-400 transition duration-300"
+              onClick={(e) => handleAnchorClick(e, 'contact')}
+            >
+              {t('contact')}
             </Link>
           </li>
         </ul>

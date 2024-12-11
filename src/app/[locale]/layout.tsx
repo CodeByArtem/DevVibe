@@ -51,7 +51,7 @@ export default async function RootLayout({
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/faviconn-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="alternate" href="https://portfolio-amber-six-98.vercel.app/ua" hrefLang="uk" />
+      <link rel="alternate" href="https://portfolio-amber-six-98.vercel.app/uk" hrefLang="uk" />
       <link rel="alternate" href="https://portfolio-amber-six-98.vercel.app/ru" hrefLang="ru" />
       <link rel="alternate" href="https://portfolio-amber-six-98.vercel.app/pl" hrefLang="pl" />
       <link rel="alternate" href="https://portfolio-amber-six-98.vercel.app/en" hrefLang="en" />
