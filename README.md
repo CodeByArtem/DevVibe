@@ -17,7 +17,7 @@
 
 - **HTML5**, **CSS3**, **JavaScript** (ES6+)
 - **React**, **Redux**
-- **Next.js**, **Webpack**, **Babel**
+- **Next.js**, **Webpack**
 - Адаптивный и отзывчивый дизайн
 - Протоколы и стандарты веб-разработки (REST, GraphQL)
 
@@ -30,15 +30,15 @@
 
 ### Дополнительно
 
-- **Docker** и **Kubernetes**
-- **CI/CD** (Jenkins, GitHub Actions)
+
+- **CI/CD** ( GitHub Actions)
 - Тестирование с **Jest** и **React Testing Library**
 
 ## Контакты
 
 
-- **LinkedIn**: [linkedin.com/in/artem-zhuravlov-713547259](https://www.linkedin.com/in/artem-zhuravlov-713547259/)
-- **GitHub**: [github.com/CodeByArtem](https://github.com/CodeByArtem)
+- **[LinkedIn](https://www.linkedin.com/in/artem-zhuravlov-713547259)**: Связь и профессиональные достижения.
+- **[GitHub](https://github.com/CodeByArtem)**: Репозитории с моими проектами и кодом.
 
 ## Моё видение
 
