@@ -37,8 +37,8 @@
 ## Контакты
 
 
-- **LinkedIn**: [linkedin.com/in/artem-zhuravlov-713547259](https://www.linkedin.com/in/artem-zhuravlov-713547259/)
-- **GitHub**: [github.com/CodeByArtem](https://github.com/CodeByArtem)
+- **[LinkedIn](https://www.linkedin.com/in/artem-zhuravlov-713547259)**: Связь и профессиональные достижения.
+- **[GitHub](https://github.com/CodeByArtem)**: Репозитории с моими проектами и кодом.
 
 ## Моё видение
 
