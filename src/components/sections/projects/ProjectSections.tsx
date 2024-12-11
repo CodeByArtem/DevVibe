@@ -1,12 +1,16 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import 'swiper/css';
 import { FaGithub, FaLink } from 'react-icons/fa';
 import Image from 'next/image';
 import { Navigation, Pagination, Scrollbar, Keyboard } from 'swiper/modules';
 import { SwiperRef } from 'swiper/react';
 import { useTranslations } from 'next-intl';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 interface Project {
   title: string;
@@ -17,6 +21,13 @@ interface Project {
 }
 
 const ProjectSection: React.FC = () => {
+  useEffect(() => {
+    // Инициализируем AOS
+    AOS.init({
+      duration: 3000, // Время анимации
+      once: true,     // Анимация срабатывает только один раз
+    });
+  }, []);
   const swiperRef = useRef<SwiperRef | null>(null);
   const t = useTranslations('ProjectSection');
   const projects: Project[] = [
@@ -113,7 +124,7 @@ const ProjectSection: React.FC = () => {
       className="py-9 min-h-screen bg-black text-green-400 flex items-center justify-center"
       style={{ backgroundImage: 'url(/images/matrix-background.webp)', backgroundSize: 'cover' }}
     >
-      <div className="container mx-auto text-center">
+      <div data-aos="zoom-in-up" className="container mx-auto text-center">
         <h2
           className="text-4xl md:text-3xl font-extrabold mb-8 text-white drop-shadow-md mt-10"
           style={{

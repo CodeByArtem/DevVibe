@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FaCss3Alt, FaGit, FaHtml5, FaJsSquare, FaNodeJs, FaReact } from 'react-icons/fa'; // Добавим FaReact
 import { SiNextdotjs } from 'react-icons/si'; // Иконка Next.js
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Typewriter from 'typewriter-effect';
 import { useTranslations } from 'next-intl';
 
@@ -38,6 +39,10 @@ const HeroSection: React.FC = () => {
     const FONT_SIZE = 16;
     let columns: Column[] = []; // Типизация массива columns
     let columnsCount = 0;
+    AOS.init({
+      duration: 3000, // Время анимации
+      once: true,     // Анимация срабатывает только один раз
+    });
 
     const initCanvasSize = () => {
       canvas.width = document.documentElement.clientWidth;
@@ -113,7 +118,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section   id="header"
+    <section    id="header"
                className="text-white flex flex-col md:flex-row items-center justify-center px-6 pb-10 relative"
       style={{
         backgroundImage: 'url(/images/aboutmatrix.webp)',
@@ -127,7 +132,7 @@ const HeroSection: React.FC = () => {
       {/* Canvas для матричной анимации */}
       <canvas id="matrix-canvas" className="absolute top-0 left-0 w-full h-full z-10" />
 
-      <div className=" w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center z-20 mt-5 md:mt-0">
+      <div data-aos="fade-right" className=" w-64 h-64 md:w-96 md:h-[28rem] mb-10 md:mb-0 flex-shrink-0 flex justify-center z-20 mt-5 md:mt-0">
         <Image
           className="rounded-xl object-contain object-center shadow-lg shadow-green-500/50 glow-effect"
           src="/images/hotoroom.png"
@@ -166,7 +171,7 @@ const HeroSection: React.FC = () => {
         </h1>
 
         {/* Описание */}
-        <p
+        <p data-aos="fade-left" data-aos-delay="500"
           className="text-lg md:text-xl mb-4  text-black font-bold"
           style={{
             textShadow:
@@ -177,7 +182,7 @@ const HeroSection: React.FC = () => {
         </p>
 
         {/* Иконки с подписями */}
-        <ul className="flex justify-center gap-8 md:gap-10 flex-wrap mt-2 md:mt-4">
+        <ul data-aos="fade-left" data-aos-delay="500" className="flex justify-center gap-8 md:gap-10 flex-wrap mt-2 md:mt-4">
           {icons.map(({ icon: Icon, color, name, label }) => (
             <li
               key={name}

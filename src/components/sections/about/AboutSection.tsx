@@ -1,9 +1,24 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaLaptopCode, FaCode, FaCogs, FaUsers } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+
+
+
 
 const AboutSection: React.FC = () => {
+  useEffect(() => {
+    // Инициализируем AOS
+    AOS.init({
+      duration: 3000, // Время анимации
+      once: true,     // Анимация срабатывает только один раз
+    });
+  }, []);
+
   const t = useTranslations('AboutSection');
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
@@ -61,7 +76,7 @@ const AboutSection: React.FC = () => {
         backgroundAttachment: 'fixed', // Картинка будет фиксирована, не будет скроллится
       }}
     >
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
+      <div data-aos="fade-right" className="relative z-10 max-w-5xl mx-auto text-center">
         <h2
           className="text-4xl md:text-3xl font-extrabold mb-8 text-white drop-shadow-md mt-10"
           style={{
@@ -79,7 +94,7 @@ const AboutSection: React.FC = () => {
         >
           {t('description')}
         </p>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <ul data-aos="fade-left"  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {points.map((point, index) => (
             <li
               key={index}

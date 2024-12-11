@@ -8,6 +8,8 @@ import { routing } from '@/i18n/routing';
 import "../../styles/globals.css";
 
 
+
+
 interface PageMetadata extends Metadata {
   title: string;
   description: string;

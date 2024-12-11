@@ -10,6 +10,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@types/aos": "^3.0.7",
+    "aos": "^2.3.4",
     "firebase": "^11.0.2",
     "next": "15.0.3",
     "next-intl": "^3.26.0",
