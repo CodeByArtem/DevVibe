@@ -42,6 +42,11 @@ export default async function RootLayout({
     <html lang={locale}>
     <head>
       <title>{metadata.title}</title>
+      <meta property="og:image" content="https://portfolio-amber-six-98.vercel.app/images/hotoroom.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:url" content="https://portfolio-amber-six-98.vercel.app" />
+      <meta property="og:type" content="website" />
       <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/faviconn-32x32.png" />
