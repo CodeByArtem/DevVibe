@@ -13,9 +13,9 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { message } = req.body;
 
-    // Проверка наличия сообщения
-    if (!message) {
-      console.log('No message provided');
+    // Проверка наличия сообщения и его содержимого
+    if (!message || message.trim() === '') {
+      console.log('No message provided or message is empty');
       return res.status(400).json({ error: 'Message is required' });
     }
 
@@ -36,9 +36,13 @@ export default async function handler(req, res) {
       // Отправка основного сообщения
       const response = await sendMessageToTelegram(TELEGRAM_URL, CHAT_ID, `Новое сообщение: ${message}`);
 
+      // Логирование ответа от Telegram
+      const responseData = await response.json();
+      console.log('Telegram API response:', responseData);
+
       // Проверка на успешность отправки
-      if (!response.ok) {
-        throw new Error(`Telegram API error: ${response.statusText}`);
+      if (!response.ok || !responseData.ok) {
+        throw new Error(`Telegram API error: ${responseData.description || response.statusText}`);
       }
 
       console.log('Message sent to Telegram successfully');
@@ -46,9 +50,13 @@ export default async function handler(req, res) {
       // Отправка автоответа
       const autoResponse = await sendMessageToTelegram(TELEGRAM_URL, CHAT_ID, 'Спасибо за ваше сообщение! Я свяжусь с вами в ближайшее время.');
 
+      // Логирование ответа от автоответа
+      const autoResponseData = await autoResponse.json();
+      console.log('Auto-response from Telegram:', autoResponseData);
+
       // Проверка автоответа
-      if (!autoResponse.ok) {
-        throw new Error(`Telegram API auto-response error: ${autoResponse.statusText}`);
+      if (!autoResponse.ok || !autoResponseData.ok) {
+        throw new Error(`Telegram API auto-response error: ${autoResponseData.description || autoResponse.statusText}`);
       }
 
       console.log('Auto response sent successfully');
