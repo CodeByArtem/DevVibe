@@ -19,8 +19,8 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Message is required' });
     }
 
-    const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-    const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+    const BOT_TOKEN = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
+    const CHAT_ID = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
 
     // Проверка токена и chat_id
     if (!BOT_TOKEN || !CHAT_ID) {
