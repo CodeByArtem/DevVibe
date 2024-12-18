@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       screens: {
         'mobile': { max: '649px' },
+
         display: {
           contents: 'contents', // добавляем display: contents
         },

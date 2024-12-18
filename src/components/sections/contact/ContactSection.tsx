@@ -131,7 +131,7 @@ const ContactSections: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0">
             <ul className="text-center md:text-left md:w-1/3 space-y-4 mb-8 md:mb-0">
               <li data-aos="fade-right">
-                <a href="https://www.instagram.com/angelic._.heart" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.instagram.com/smail_it_/" target="_blank" rel="noopener noreferrer"
                    className="inline-flex items-center justify-start space-x-2 text-[#E4405F] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold">
                   <FaInstagram className="text-2xl" />
                   <span>{t('instagram')}</span>

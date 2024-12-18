@@ -33,6 +33,7 @@
   },
   "AboutSection": {
     "title": "O mnie",
+    "im": "I",
     "description": "Tworzę nowoczesne aplikacje internetowe z responsywnym designem i skupieniem na czystym, łatwym do utrzymania kodzie. Technologie, z których korzystam to HTML, CSS, JavaScript, React, Node.js i inne. Moją misją jest pomaganie klientom w osiąganiu ich celów za pomocą efektywnych i jakościowych rozwiązań.",
     "points": {
       "simplicity": {
@@ -124,7 +125,7 @@
   "Footer": {
     "nav": {
       "home": "Strona główna",
-      "about": "O nas",
+      "about": "O mnie",
       "projects": "Projekty",
       "contact": "Kontakt"
     },

@@ -73,13 +73,7 @@ const ProjectSection: React.FC = () => {
       liveLink: 'https://urban-drive-ijfb.vercel.app/',
       repoLink: 'https://github.com/CodeByArtem/UrbanDrive',
     },
-    {
-      title: t('teaOasis.title'),
-      image: '/images/project/lipton.png',
-      description: t('teaOasis.description'),
-      liveLink: 'https://codebyartem.github.io/wonderful-friends/',
-      repoLink: 'https://github.com/CodeByArtem/wonderful-friends',
-    },
+
     {
       title: t('portfolio.title'),
       image: '/images/project/portfolio.png',
@@ -87,13 +81,7 @@ const ProjectSection: React.FC = () => {
       liveLink: 'https://ihordid.github.io/return-js/index.html',
       repoLink: 'https://github.com/IhorDid/return-js',
     },
-    {
-      title: t('travelTrucks.title'),
-      image: '/images/project/travel.png',
-      description: t('travelTrucks.description'),
-      liveLink: 'https://urban-drive-ijfb.vercel.app/',
-      repoLink: 'https://github.com/CodeByArtem/UrbanDrive',
-    },
+
     {
       title: t('teaOasis.title'),
       image: '/images/project/lipton.png',
@@ -101,13 +89,7 @@ const ProjectSection: React.FC = () => {
       liveLink: 'https://codebyartem.github.io/wonderful-friends/',
       repoLink: 'https://github.com/CodeByArtem/wonderful-friends',
     },
-    {
-      title: t('portfolio.title'),
-      image: '/images/project/portfolio.png',
-      description: t('portfolio.description'),
-      liveLink: 'https://ihordid.github.io/return-js/index.html',
-      repoLink: 'https://github.com/IhorDid/return-js',
-    },
+
     {
       title: t('aquatrack.title'),
       image: '/images/project/vodatreck.png',

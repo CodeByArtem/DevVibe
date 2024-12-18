@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f87ce8e1-69b5-450d-8518-2bdfaa5aac49" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/ui/button/ChatWidget.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/api/send-message.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messages/pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/pl.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messages/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/ru.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages/ua.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/uk.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/i18n/routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/routing.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/uk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/about/AboutSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/about/AboutSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/contact/ContactSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/contact/ContactSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/projects/ProjectSections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/projects/ProjectSections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +114,8 @@
       <workItem from="1733879263175" duration="3325000" />
       <workItem from="1733944062476" duration="12582000" />
       <workItem from="1733957219210" duration="1441000" />
+      <workItem from="1734535367709" duration="2382000" />
+      <workItem from="1734538140964" duration="9872000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <option name="createBranch" value="false" />

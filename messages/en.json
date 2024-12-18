@@ -32,6 +32,7 @@
   },
   "AboutSection": {
     "title": "About me",
+    "im": "I",
     "description": "I create modern web applications with responsive design and a focus on clean, maintainable code. My technologies include HTML, CSS, JavaScript, React, Node.js, and more. My goal is to help clients achieve their objectives through effective and quality solutions.",
     "points": {
       "simplicity": {
@@ -126,7 +127,7 @@
   "Footer": {
     "nav": {
       "home": "Home",
-      "about": "About",
+      "about": "About me",
       "projects": "Projects",
       "contact": "Contact"
     },

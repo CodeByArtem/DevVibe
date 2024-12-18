@@ -5,11 +5,6 @@ import { useTranslations } from 'next-intl';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
-
-
-
-
 const AboutSection: React.FC = () => {
   useEffect(() => {
     // Инициализируем AOS
@@ -24,7 +19,7 @@ const AboutSection: React.FC = () => {
 
   const points = [
     {
-      title: t('title'),
+      title: t('im'),
       description: t('points.simplicity.description'),
       icon: <FaLaptopCode className="text-purple-700 text-5xl mb-3 drop-shadow-lg" />,
       backText: t('points.simplicity.backText'),
@@ -78,7 +73,7 @@ const AboutSection: React.FC = () => {
     >
       <div data-aos="fade-right" className="relative z-10 max-w-5xl mx-auto text-center">
         <h2
-          className="text-4xl md:text-3xl font-extrabold mb-8 text-white drop-shadow-md mt-10"
+          className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 text-white drop-shadow-md mt-10"
           style={{
             textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00',
           }}
@@ -86,7 +81,7 @@ const AboutSection: React.FC = () => {
           {t('title')}
         </h2>
         <p
-          className="text-xl md:text-lg mb-10 font-bold text-black"
+          className="text-xl md:text-2xl lg:text-3xl mb-10 font-bold text-black"
           style={{
             textShadow:
               '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00',
@@ -94,7 +89,8 @@ const AboutSection: React.FC = () => {
         >
           {t('description')}
         </p>
-        <ul data-aos="fade-left"  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <ul data-aos="fade-left"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10 xl:gap-12">
           {points.map((point, index) => (
             <li
               key={index}
@@ -111,15 +107,17 @@ const AboutSection: React.FC = () => {
                   className={`absolute w-full h-full rounded-lg shadow-lg flex flex-col items-center justify-center backface-hidden p-4 ${point.backgroundColor}`}
                 >
                   {point.icon}
-                  <h3 className={`text-lg font-semibold ${point.headerColor} mb-2`}>
+                  <h3 className={`text-lg md:text-xl lg:text-2xl font-semibold ${point.headerColor} mb-2`}>
                     {point.title}
                   </h3>
-                  <p className={`${point.descriptionColor}`}>{point.description}</p>
+                  <p className={`text-sm md:text-base lg:text-lg ${point.descriptionColor}`}>
+                    {point.description}
+                  </p>
                 </div>
                 <div
                   className="absolute w-full h-full bg-purple-700 text-white rounded-lg shadow-lg flex flex-col items-center justify-center transform rotate-y-180 backface-hidden p-4"
                 >
-                  <p className="text-sm">{point.backText}</p>
+                  <p className="text-sm md:text-base lg:text-lg">{point.backText}</p>
                 </div>
               </div>
             </li>

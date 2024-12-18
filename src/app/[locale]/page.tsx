@@ -4,6 +4,7 @@ import AboutSection from '@/components/sections/about/AboutSection';
 import ProjectSection from '@/components/sections/projects/ProjectSections';
 import ContactSection from '@/components/sections/contact/ContactSection';
 import Footer from '@/components/layout/footer/Footer';
+import ChatWidget from '@/components/ui/button/ChatWidget';
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <ProjectSection />
       <ContactSection/>
       <Footer />
+      <ChatWidget  />
 
     </>
 
