@@ -45,6 +45,7 @@ const ChatWidget: React.FC = () => {
       setIsSending(false);
       return;
     }
+
     // Если не нашли в FAQ, отправляем запрос на сервер
     try {
       const response = await fetch('/api/send-message', {
@@ -91,9 +92,12 @@ const ChatWidget: React.FC = () => {
     setIsFormVisible(false); // Скрыть форму чата
   };
 
+  // Если форма не видна, не рендерим компонент
+  if (!isFormVisible) return null;
+
   return (
     <div
-      className={`fixed bottom-40 right-4 p-4 bg-white bg-opacity-50 shadow-lg rounded-lg border border-gray-200 w-full max-w-xs z-[999] ${!isFormVisible ? 'opacity-0' : 'opacity-100'} transition-opacity duration-1000 ease-in-out`}
+      className="fixed bottom-40 right-4 p-4 bg-white bg-opacity-50 shadow-lg rounded-lg border border-gray-200 w-full max-w-xs z-[999] transition-all duration-300 ease-in-out"
     >
       <div className="flex flex-col space-y-2">
         <button
