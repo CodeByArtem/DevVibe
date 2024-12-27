@@ -7,7 +7,6 @@ import { useTranslations } from 'next-intl';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
 const ContactSections: React.FC = () => {
   const t = useTranslations('ContactSections');
   const [formData, setFormData] = useState({
@@ -22,42 +21,95 @@ const ContactSections: React.FC = () => {
     message: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
   useEffect(() => {
-    // Инициализируем AOS
-    AOS.init({
-      duration: 1000, // Время анимации
-      once: true,     // Анимация срабатывает только один раз
-    });
+    AOS.init();
   }, []);
 
+  // Обработчик изменения данных в форме
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
 
+    // Обновляем состояние формы
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+
+    // Валидация сразу при изменении значения
+    if (name === 'name') {
+      if (/\d/.test(value)) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          name: t('errors.noDigitsInName'), // Сообщение для цифр в имени
+        }));
+      } else if (value.length > 50) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          name: t('errors.nameLength'), // Сообщение для длины имени
+        }));
+      } else {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          name: '', // Очистка ошибки при корректном значении
+        }));
+      }
+    }
+    if (name === 'email') {
+      // Проверка на пустое значение
+      if (!value) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          email: "", // Сообщение для пустого email
+        }));
+      }
+      // Проверка на корректный формат email
+      else if (!/\S+@\S+\.\S+/.test(value)) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          email: t('errors.email'), // Сообщение для некорректного email
+        }));
+      } else {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          email: '', // Очистка ошибки при корректном значении
+        }));
+      }
+    }
+
+  };
+
+
+
+  // Валидация формы
   const validateForm = () => {
     const formErrors = { name: '', email: '', message: '' };
     let isValid = true;
 
+    // Проверка имени
     if (!formData.name) {
       formErrors.name = t('errors.name');
       isValid = false;
+    } else if (/\d/.test(formData.name)) {
+      formErrors.name = t('errors.noDigitsInName'); // Сообщение для цифр в имени
+      isValid = false;
+    } else if (formData.name.length > 50) {
+      formErrors.name = t('errors.nameLength');
+      isValid = false;
     }
 
+    // Проверка email
     if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
       formErrors.email = t('errors.email');
       isValid = false;
     }
 
+    // Проверка сообщения
     if (!formData.message) {
       formErrors.message = t('errors.message');
       isValid = false;
     }
 
-    setErrors(formErrors);
+    setErrors(formErrors);  // Обновляем состояние ошибок
     return isValid;
   };
 
@@ -103,10 +155,21 @@ const ContactSections: React.FC = () => {
     }
   };
 
+  const isFormValid = () => {
+    return (
+      formData.name &&
+      formData.email &&
+      formData.message &&
+      !/\d/.test(formData.name) && // Проверка на цифры в имени
+      formData.name.length <= 50 && // Проверка длины имени
+      !errors.name &&
+      !errors.email &&
+      !errors.message
+    );
+  };
   return (
     <>
-      <section id="contact"
-               className="relative min-h-screen bg-black flex flex-col items-center justify-center overflow-hidden">
+      <section id="contact" className="relative min-h-screen bg-black flex flex-col items-center justify-center overflow-hidden">
         <div
           style={{
             backgroundImage: 'url(\'/images/matrixconact.webp\')',
@@ -118,12 +181,10 @@ const ContactSections: React.FC = () => {
           className="absolute inset-0"
         ></div>
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 py-12"
-             style={{ textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00' }}>
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 py-12" style={{ textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00' }}>
           <div data-aos="fade-down" className="text-center mb-8">
             <h2 className="text-4xl md:text-3xl font-extrabold mb-8 text-white drop-shadow-md">{t('header')}</h2>
-            <p className="text-lg md:text-xl mb-4 text-black font-bold"
-               style={{ textShadow: '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00' }}>
+            <p className="text-lg md:text-xl mb-4 text-black font-bold" style={{ textShadow: '0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00' }}>
               {t('subheader')}
             </p>
           </div>
@@ -197,8 +258,8 @@ const ContactSections: React.FC = () => {
               </div>
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="w-full px-4 py-2 bg-green-500 text-black font-bold rounded-md hover:bg-green-600 transition"
+                disabled={isSubmitting || !isFormValid()} // Кнопка дизейбл, если форма не валидна или идет отправка
+                className="w-full px-4 py-2 bg-green-500 text-black font-bold rounded-md hover:bg-green-600 transition disabled:bg-gray-300 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? t('sending') : t('send')}
               </button>

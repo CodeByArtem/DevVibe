@@ -19,8 +19,6 @@
   "LocaleSwitcher": {
     "label": "Zmień język",
     "locale": "{locale, select, ru {Rosyjski}  en {Angielski} pl {Polski} uk {Ukraiński} other {Polski}}"
-
-
   },
   "Logo": {
     "phrase_1": "Doskonały rozwój dla Ciebie!",
@@ -69,6 +67,8 @@
     "emailPlaceholder": "Twój email",
     "messagePlaceholder": "Twoja wiadomość",
     "errors": {
+      "noDigitsInName": "Imię nie może zawierać cyfr.",
+      "nameLength": "Imię nie może być dłuższe niż 50 znaków.",
       "name": "Proszę wprowadzić swoje imię",
       "email": "Proszę wprowadzić poprawny email",
       "message": "Proszę wprowadzić wiadomość"
@@ -140,5 +140,17 @@
     "about": "O mnie",
     "projects": "Projekty",
     "contact": "Kontakt"
+  },
+  "form": {
+    "placeholder": "Witaj, jak mogę Ci pomóc?",
+    "messageSent": "Wiadomość wysłana! Dziękujemy za zapytanie.",
+    "sendingError": "Błąd podczas wysyłania wiadomości.",
+    "send": "Wyślij",
+    "sending": "Wysyłanie..."
+  },
+  "faq": {
+    "hello": "Witaj! Jak mogę Ci pomóc?",
+    "thanks": "Proszę bardzo!"
+
   }
 }
