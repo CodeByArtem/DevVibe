@@ -10,7 +10,7 @@ const AboutSection: React.FC = () => {
     // Инициализируем AOS
     AOS.init({
       duration: 3000, // Время анимации
-      once: true,     // Анимация срабатывает только один раз
+      once: true,     
     });
   }, []);
 
