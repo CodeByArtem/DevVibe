@@ -213,7 +213,17 @@ const ContactSections: React.FC = () => {
                   <FaTelegram className="text-2xl" />
                   <span>{t('telegram')}</span>
                 </a>
-              </li>
+              </li >
+              <li data-aos="fade-right" data-aos-delay="900">
+              <a  href="https://freelancehunt.com/freelancer/SmaiL_love_Code.html?from=shield&r=NN7ZX" target="_blank" rel="noopener noreferrer">
+  <img 
+    src="https://freelancehunt.com/shields/display/id/1632835/type/rating?style=for-the-badge&amp;lang=ru" 
+    alt="Freelancehunt — простой и честный фриланс" 
+    width={300} 
+    height={100} 
+  />
+</a>
+</li>
             </ul>
 
             <form data-aos="fade-left" data-aos-delay="300" onSubmit={handleSubmit} className="space-y-4 md:w-1/3">
