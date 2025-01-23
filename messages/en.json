@@ -120,6 +120,10 @@
       "title": "AQUATRACK",
       "description": "The project idea is to create a convenient web application..."
     },
+    "sass": {
+      "title": "sass",
+      "description": "SassWork — a showcase of my web development skills! This project focuses on stylish design and the use of the Sass preprocessor's capabilities"
+    },
     "projects": {
       "title": "My Projects",
       "liveVersion": "Live Version",

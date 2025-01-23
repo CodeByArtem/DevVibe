@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { FaInstagram, FaTiktok, FaLinkedin, FaTelegram } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';  // Импортируем ToastContainer
 import 'react-toastify/dist/ReactToastify.css';
 import { useTranslations } from 'next-intl';
@@ -198,14 +198,7 @@ const ContactSections: React.FC = () => {
                   <span>{t('instagram')}</span>
                 </a>
               </li>
-              <li data-aos="fade-right" data-aos-delay="500">
-                <a href="https://www.tiktok.com/@angelic_heart?_t=8rwOvjqoDJQ&_r=1" target="_blank"
-                   rel="noopener noreferrer"
-                   className="inline-flex items-center justify-start space-x-2 text-[#010101] text-xl hover:text-[#F4F4F4] hover:text-shadow-md text-shadow font-bold">
-                  <FaTiktok className="text-2xl" />
-                  <span>{t('tiktok')}</span>
-                </a>
-              </li>
+             
               <li data-aos="fade-right" data-aos-delay="700">
                 <a href="https://www.linkedin.com/in/artem-zhuravlov-713547259/" target="_blank"
                    rel="noopener noreferrer"

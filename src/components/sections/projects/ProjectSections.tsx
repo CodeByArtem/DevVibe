@@ -97,6 +97,14 @@ const ProjectSection: React.FC = () => {
       liveLink: 'https://final-project-frontend-weld.vercel.app',
       repoLink: 'https://github.com/Kamila-Lohvynenko/final-project-frontend',
     },
+    {
+      title: t('sass.title'),
+      image: '/images/project/sass.jpg',
+      description: t('sass.description'),
+      liveLink: 'https://codebyartem.github.io/sasswork/',
+      repoLink: 'https://github.com/CodeByArtem/sasswork',
+
+    }
 
   ];
 

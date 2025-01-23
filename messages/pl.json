@@ -116,6 +116,10 @@
       "title": "AQUATRACK",
       "description": "Pomysł projektu polega na stworzeniu wygodnej aplikacji internetowej..."
     },
+    "sass": {
+      "title": "sass",
+      "description": "Projekt został stworzony z naciskiem na stylowy design i wykorzystanie możliwości preprocesora Sass"
+    },
     "projects": {
       "title": "Moje Projekty",
       "liveVersion": "Wersja na żywo",
